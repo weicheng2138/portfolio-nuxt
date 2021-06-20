@@ -12,7 +12,7 @@ Before I start the job, there are something need to be done.
 
 3. Formatter needs to be settled down. By right click the format document with...(Vetur or Prettier).
 
-4. Setup for tailwind and nuxt. Checkout [nuxt/tailwind](https://tailwindcss.nuxtjs.org/). Install VScode extension of Tailwind CSS IntelliSense. It will be activate after the following process. If you wanna use sass, install it.
+4. Setup for tailwind and nuxt. Checkout [nuxt/tailwind](https://tailwindcss.nuxtjs.org/). Install VScode extension of Tailwind CSS IntelliSense. It will be activate after the following process. If you wanna use sass, install it. Setup tailwind.css in ./assets/css/tailwind.css is necessary.
 
     ```bash
     # install nuxt app and default tailwind css in the cli
@@ -21,6 +21,14 @@ Before I start the job, there are something need to be done.
 
     # Create your tailwind.config.js running:
     $ npx tailwindcss init
+    ```
+
+    Add following code in tailwind.css. We may need to import something (font-family etc.) and the enter point is this file.
+
+    ```
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
     ```
 
     Configure tailwindcss property in nuxt.config.js. (Unnecessary)

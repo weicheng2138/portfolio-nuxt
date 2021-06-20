@@ -8,9 +8,33 @@ Before I start the job, there are something need to be done.
 
 1. Understand the code structure of Brittany's work. Something like code enter point, pages structure, components css styles, etc. All these know-how may be presented from [Gatsby doc](https://www.gatsbyjs.org/docs/) and its dependencies.
 
-2. Learn [Nuxt](https://nuxtjs.org/) and [Tailwind](https://tailwindcss.com/). Create app for nuxt-porfolio and install extension for tailwind in vscode. Giving off attribute to no-console rule in eslint.js.
+2. Learn [Nuxt](https://nuxtjs.org/) and [Tailwind](https://tailwindcss.com/). Create app for nuxt-portfolio and install extension for tailwind in vscode.
 
 3. Formatter needs to be settled down. By right click the format document with...(Vetur or Prettier).
+
+4. Setup for tailwind and nuxt. Checkout [nuxt/tailwind](https://tailwindcss.nuxtjs.org/). Install VScode extension of Tailwind CSS IntelliSense. It will be activate after the following process. If you wanna use sass, install it.
+
+    ```bash
+    # install nuxt app and default tailwind css in the cli
+    $ yarn create nuxt-app <project-name>
+    $ yarn add --dev @nuxtjs/tailwindcss postcss@latest
+
+    # Create your tailwind.config.js running:
+    $ npx tailwindcss init
+    ```
+
+    Configure tailwindcss property in nuxt.config.js. (Unnecessary)
+
+    ```
+    export default {
+        tailwindcss: {
+            cssPath: '~/assets/css/tailwind.css',
+            configPath: 'tailwind.config.js',
+            exposeConfig: false,
+            config: {}
+        }
+    }
+    ```
 
 ## Build Setup
 

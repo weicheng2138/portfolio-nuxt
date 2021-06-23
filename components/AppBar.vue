@@ -41,7 +41,7 @@
                         <span class="text-bcColor">0{{ index + 1 }}. </span>
                         {{ link.name }}
                     </NuxtLink>
-                    <button class="bigButton ml-4 p-4">Resume</button>
+                    <button class="bigButton ml-4 py-2 px-4">Resume</button>
                 </div>
             </div>
         </nav>

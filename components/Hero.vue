@@ -20,7 +20,7 @@
                 sapiente assumenda quod totam iusto voluptatum maxime est
                 asperiores!
             </p>
-            <button class="bigButton mt-12">Get In Touch</button>
+            <button class="bigButton mt-12 p-5">Get In Touch</button>
         </div>
     </section>
 </template>

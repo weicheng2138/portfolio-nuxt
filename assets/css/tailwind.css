@@ -21,7 +21,7 @@ html {
 /* Components */
 .bigButton {
     @apply font-fira-code text-bcColor bg-transparent border border-bcColor 
-    rounded px-5 py-5 text-xs transition duration-500 ease-in-out hover:bg-opacity-10 hover:bg-bcColor;
+    rounded text-xs transition duration-500 ease-in-out hover:bg-opacity-10 hover:bg-bcColor;
     /* border: 1px solid var(--green);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;

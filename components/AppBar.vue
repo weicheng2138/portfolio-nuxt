@@ -6,7 +6,6 @@
             </div>
             <div>
                 <a href="#">
-                    mobile menu
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="36px"
@@ -32,32 +31,51 @@
                         />
                     </svg>
                 </a>
-                <NuxtLink to="/404" class="btn">About</NuxtLink>
-                <NuxtLink to="/404" class="btn">Experience</NuxtLink>
-                <NuxtLink to="/404" class="btn">Work</NuxtLink>
-                <NuxtLink to="/404" class="btn">Contact</NuxtLink>
-                <NuxtLink to="/404" class="btn">Resume</NuxtLink>
+                <div class="">
+                    <NuxtLink
+                        v-for="(link, index) in navLinks"
+                        :key="link.name"
+                        :to="link.url"
+                        class="navBtn"
+                    >
+                        <span class="text-bcColor">0{{ index + 1 }}. </span>
+                        {{ link.name }}
+                    </NuxtLink>
+                    <button class="bigButton ml-4 p-4">Resume</button>
+                </div>
             </div>
         </nav>
     </div>
 </template>
 
 <script>
-export default {};
+import { navLinks } from "@/config";
+export default {
+    data() {
+        return {
+            navLinks: navLinks,
+        };
+    },
+    methods: {
+        testBtn() {
+            console.log(navLinks);
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 nav {
-    @apply flex justify-between items-center py-2 px-10 w-full shadow-lg font-fira-code;
+    @apply flex justify-between items-center w-full font-fira-code h-navHeight;
 
     .logo {
-        @apply p-4 font-bold text-emerald-400;
+        @apply font-bold text-bcColor;
     }
-    .btn {
-        @apply px-4 py-2 text-gray-500 rounded-lg hover:bg-emerald-100 hover:text-emerald-700;
+    .navBtn {
+        @apply pl-4 pr-1.5 py-2 text-xs text-bcColorText hover:text-bcColor;
 
         &.nuxt-link-exact-active {
-            @apply bg-emerald-100 text-emerald-700;
+            @apply border-2 border-dotted border-bcColor text-bcColor;
         }
     }
 }

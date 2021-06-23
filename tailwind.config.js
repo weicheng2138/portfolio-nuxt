@@ -20,8 +20,17 @@ module.exports = {
                 cwc: {
                     100: "#000000",
                 },
-                bgColor: "#112340",
+                bgColor: "#0a1930",
+                bcColor: "#64ffda",
+                bcColorTitle: "#ccd6f6",
+                bcColorText: "#8892b0",
             },
+        },
+        height: {
+            navHeight: "100px",
+        },
+        maxWidth: {
+            heroP: "500px",
         },
     },
     variants: {

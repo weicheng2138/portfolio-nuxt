@@ -23,7 +23,7 @@ Before I start the job, there are something need to be done.
     $ npx tailwindcss init
     ```
 
-    Add following code in tailwind.css. We may need to import something (font-family etc.) and the enter point is this file.
+    Add following code in tailwind.css. We may need to import something (font-family etc.) and the entry point is this file.
 
     ```
     @tailwind base;
@@ -43,6 +43,9 @@ Before I start the job, there are something need to be done.
         }
     }
     ```
+
+    - Beginning loader svg animation is in ./components/loader.js
+    -
 
 ## Build Setup
 

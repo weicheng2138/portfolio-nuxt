@@ -1,7 +1,19 @@
 <template>
     <div>
         <Hero />
+        <GithubElement
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title"
+            :excerpt="post.previewText"
+            :thumbnailImg="post.thumbnailUrl"
+            :id="post.id"
+        />
 
+        <About :title="aboutPage.title" :content="aboutPage.content" />
+
+        <Footer />
+        <button class="bigButton" @click="refresh">Refresh</button>
         <!-- <div class="links">
                 <a
                     href="https://nuxtjs.org/"
@@ -19,7 +31,69 @@
 </template>
 
 <script>
-export default {};
+import GithubElement from "@/components/GithubElement.vue";
+import About from "@/components/About.vue";
+export default {
+    components: {
+        GithubElement,
+        About,
+    },
+    created() {
+        console.log("index.vue");
+    },
+    async asyncData(context) {
+        let tempPosts = await context.app.$storyapi.get("cdn/stories", {
+            version: "draft",
+            starts_with: "blog/",
+        });
+
+        let tempAboutPage = await context.app.$storyapi.get(
+            "cdn/stories/about/about",
+            {
+                version: "draft",
+            }
+        );
+        console.log(tempAboutPage);
+
+        return {
+            aboutPage: {
+                title: tempAboutPage.data.story.content.title,
+                content: tempAboutPage.data.story.content.content,
+            },
+            posts: tempPosts.data.stories.map((el) => {
+                return {
+                    id: el.slug,
+                    title: el.content.title,
+                    previewText: el.content.previewText,
+                    thumbnailUrl: el.content.thumbnailUrl.filename,
+                };
+            }),
+        };
+        // return context.app.$storyapi
+        //     .get("cdn/stories", {
+        //         version: "draft",
+        //         starts_with: "blog/",
+        //     })
+        //     .then((res) => {
+        //         // console.log(res.data.stories[0].content.thumbnailUrl);
+        //         return {
+        //             posts: res.data.stories.map((el) => {
+        //                 return {
+        //                     id: el.slug,
+        //                     title: el.content.title,
+        //                     previewText: el.content.previewText,
+        //                     thumbnailUrl: el.content.thumbnailUrl.filename,
+        //                 };
+        //             }),
+        //         };
+        //     });
+    },
+    methods: {
+        refresh() {
+            location.reload(true);
+        },
+    },
+};
 </script>
 
 <style>

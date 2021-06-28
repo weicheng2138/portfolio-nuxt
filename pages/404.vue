@@ -8,6 +8,14 @@
     </section>
 </template>
 
+<script>
+export default {
+    created() {
+        console.log("404.vue");
+    },
+};
+</script>
+
 <style lang="scss" scoped>
 .wrapper {
     @apply min-h-screen flex flex-col justify-center items-center text-center mx-auto;

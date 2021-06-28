@@ -45,7 +45,8 @@ Before I start the job, there are something need to be done.
     ```
 
     - Beginning loader svg animation is in ./components/loader.js
-    -
+    - asyncData() can not be used in components, components take only pure vue stuff.
+    - Normal spa mode will load empty dom, but not universal mode (SSR). SSR web will load dom at the beginning. SSR will evalute the vue component in the server. After the first load (refresh), it will run on client side (Turn to be SPA), including nuxt-link and router.
 
 ## Build Setup
 

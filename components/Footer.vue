@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section>
         <a
             href="https://github.com/weicheng2138/portfolio-nuxt"
             class="text-gray-300 hover:text-emerald-500"
@@ -17,7 +17,7 @@
         >
             <div>Refer to Brittany Chiang's portfolio</div>
         </a>
-    </div>
+    </section>
 </template>
 
 <script>

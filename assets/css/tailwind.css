@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sf-mono");
 
 @tailwind base;
 @tailwind components;
@@ -9,18 +10,41 @@ html {
     width: 100%;
 }
 
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+
+    @apply lg:px-36 lg:py-48 md:px-24 md:py-48 sm:px-12 sm:py-36 px-6 py-32;
+    /* 
+    &.fillHeight {
+        padding: 0 150px;
+
+        @media (max-width: 1080px) {
+            padding: 0 100px;
+        }
+        @media (max-width: 768px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 480px) {
+            padding: 0 25px;
+        }
+    } */
+}
+
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
 .bcColorFont {
-    @apply text-bcColor font-fira-code font-normal;
+    @apply text-bcColor font-mono font-normal;
     font-size: clamp(14px, 5vw, 16px);
 }
 /* Components */
 .bigButton {
-    @apply font-fira-code text-bcColor bg-transparent border border-bcColor 
+    @apply font-mono text-bcColor bg-transparent border border-bcColor 
     rounded text-xs transition duration-500 ease-in-out hover:bg-opacity-10 hover:bg-bcColor;
     /* border: 1px solid var(--green);
     border-radius: var(--border-radius);

@@ -31,7 +31,7 @@
                         />
                     </svg>
                 </a>
-                <div class="">
+                <div>
                     <NuxtLink
                         v-for="(link, index) in navLinks"
                         :key="link.name"
@@ -66,13 +66,13 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-    @apply flex justify-between items-center w-full font-fira-code h-navHeight;
+    @apply flex justify-between items-center w-full font-mono h-navHeight px-6 md:px-10 lg:px-12;
 
     .logo {
         @apply font-bold text-bcColor;
     }
     .navBtn {
-        @apply pl-4 pr-1.5 py-2 text-xs text-bcColorText hover:text-bcColor;
+        @apply pl-4 pr-1.5 py-2 text-xs text-bcColorTitle hover:text-bcColor;
 
         &.nuxt-link-exact-active {
             @apply border-2 border-dotted border-bcColor text-bcColor;

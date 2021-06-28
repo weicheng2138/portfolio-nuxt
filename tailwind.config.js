@@ -12,7 +12,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "fira-code": ["Fira Code", "sans-serif"],
+                mono: ["SF Mono", "Fira Code", "sans-serif"],
+                sans: ["Calibre", "San Francisco", "SF Pro Text"],
             },
             colors: {
                 emerald: colors.emerald,
@@ -29,8 +30,10 @@ module.exports = {
         height: {
             navHeight: "100px",
         },
-        maxWidth: {
-            heroP: "500px",
+        screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "1080px",
         },
     },
     variants: {

@@ -1,8 +1,10 @@
 <template>
     <div>
-        <AppBar class="px-6" />
+        <AppBar />
+        <div class="sideElementLeft"></div>
+        <div class="sideElementRight"></div>
         <main>
-            <Nuxt class="px-12" />
+            <Nuxt />
         </main>
     </div>
 </template>

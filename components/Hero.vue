@@ -8,7 +8,9 @@
             />
         </div> -->
         <div>
-            <h1 class="bcColorFont pb-5 pl-1">Hi, my name is</h1>
+            <h1 class="bcColorFont mb-5 ml-0 sm:mb-8 sm:ml-1">
+                Hi, my name is
+            </h1>
             <h2 class="text-bcColorTitle bigHeading">Weicheng Hung.</h2>
             <h3 class="text-bcColorText bigHeading mt-3 leading-none">
                 I build things for the web.
@@ -20,7 +22,9 @@
                 sapiente assumenda quod totam iusto voluptatum maxime est
                 asperiores!
             </p>
-            <button class="bigButton mt-12 p-5">Get In Touch</button>
+            <button class="bigButton py-5 px-7 mt-bcTouchButton">
+                Get In Touch
+            </button>
         </div>
     </section>
 </template>
@@ -33,5 +37,9 @@ export default {};
 .bigHeading {
     font-size: clamp(40px, 8vw, 80px);
     @apply font-semibold;
+}
+.bcColorFont {
+    @apply text-bcColor font-mono font-normal;
+    font-size: clamp(14px, 5vw, 16px);
 }
 </style>

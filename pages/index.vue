@@ -12,7 +12,6 @@
 
         <About :title="aboutPage.title" :content="aboutPage.content" />
 
-        <Footer />
         <button class="bigButton" @click="refresh">Refresh</button>
         <!-- <div class="links">
                 <a
@@ -53,8 +52,6 @@ export default {
                 version: "draft",
             }
         );
-        console.log(tempAboutPage);
-
         return {
             aboutPage: {
                 title: tempAboutPage.data.story.content.title,

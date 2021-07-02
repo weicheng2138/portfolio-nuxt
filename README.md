@@ -10,6 +10,8 @@ Before I start the job, there are something need to be done.
 
 2. Learn [Nuxt](https://nuxtjs.org/) and [Tailwind](https://tailwindcss.com/). Create app for nuxt-portfolio and install extension for tailwind in vscode.
 
+    - when you are using Tailwind css, it better start from mobile to larger screen. The repondsive functionality is using **min-width (height)** instead of min-width (height).
+
 3. Formatter needs to be settled down. By right click the format document with...(Vetur or Prettier).
 
 4. Setup for tailwind and nuxt. Checkout [nuxt/tailwind](https://tailwindcss.nuxtjs.org/). Install VScode extension of Tailwind CSS IntelliSense. It will be activate after the following process. If you wanna use sass, install it. Setup tailwind.css in ./assets/css/tailwind.css is necessary.
@@ -45,8 +47,12 @@ Before I start the job, there are something need to be done.
     ```
 
     - Beginning loader svg animation is in ./components/loader.js
+    - Variants section in tailwind.config.js gives the ability for some css attributes. We have **hover** **responsive** **focus**, etc. Some of them are not default to in the attributes. You have to automatically edited.
+
+5. Tips of Nuxt
+
     - asyncData() can not be used in components, components take only pure vue stuff.
-    - Normal spa mode will load empty dom, but not universal mode (SSR). SSR web will load dom at the beginning. SSR will evalute the vue component in the server. After the first load (refresh), it will run on client side (Turn to be SPA), including nuxt-link and router.
+    - Normal spa mode will load empty dom, but not universal mode (SSR). SSR web will load dom at the beginning. SSR will evalute the vue component in the server (SEO purpose for existing DOM). After the first load (refresh), it will run on client side (Turn to be SPA), including nuxt-link and router.
 
 ## Build Setup
 

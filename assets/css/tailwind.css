@@ -6,8 +6,39 @@
 @tailwind utilities;
 
 html {
-    @apply bg-bgColor box-border;
+    box-sizing: border-box;
     width: 100%;
+}
+
+#root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+::selection {
+    @apply bg-bcLightestNavy text-bcLightestSlate;
+}
+
+:focus {
+    @apply outline-bcStyle;
+}
+
+body {
+    @apply bg-bgColor text-bcSlate font-sans text-bcXl leading-snug;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -33,19 +64,10 @@ main {
     } */
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-.bcColorFont {
-    @apply text-bcColor font-mono font-normal;
-    font-size: clamp(14px, 5vw, 16px);
-}
 /* Components */
 .bigButton {
     @apply font-mono text-bcColor bg-transparent border border-bcColor 
-    rounded text-xs transition duration-500 ease-in-out hover:bg-opacity-10 hover:bg-bcColor;
+    rounded text-bcSm transition duration-250 ease-bcEasing hover:bg-opacity-10 hover:bg-bcColor;
     /* border: 1px solid var(--green);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;

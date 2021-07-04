@@ -1,10 +1,10 @@
 <template>
     <div id="root">
         <Loading :isLoading="isLoading" />
-        <div v-if="!isLoading">
+        <div class="content" v-if="!isLoading">
             <AppBar />
-            <div class="sideElementLeft"></div>
-            <div class="sideElementRight"></div>
+            <Side :isHome="isHome" :orientation="'right'" />
+            <Side :isHome="isHome" :orientation="'left'" />
             <main class="fillHeight">
                 <Nuxt />
                 <Footer />
@@ -20,6 +20,7 @@ export default {
     data() {
         return {
             isLoading: true,
+            isHome: true,
         };
     },
     mounted() {
@@ -30,4 +31,7 @@ export default {
 };
 </script>
 <style>
+.content {
+    @apply flex flex-col min-h-screen;
+}
 </style>

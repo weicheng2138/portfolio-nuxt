@@ -2,7 +2,7 @@ export default {
     mode: "universal",
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: "portfolio-nuxt",
+        title: "Weicheng Hung",
         meta: [
             { charset: "utf-8" },
             {

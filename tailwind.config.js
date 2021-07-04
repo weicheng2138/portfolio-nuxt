@@ -72,6 +72,9 @@ module.exports = {
             outline: {
                 bcStyle: ["2px dashed #64ffda", "3px"],
             },
+            inset: {
+                side: "40px",
+            },
         },
         height: {
             navHeight: "100px",

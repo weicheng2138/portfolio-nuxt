@@ -22,7 +22,7 @@
                 sapiente assumenda quod totam iusto voluptatum maxime est
                 asperiores!
             </p>
-            <button class="bigButton py-5 px-7 mt-bcTouchButton">
+            <button class="bigButton text-bcSm py-5 px-7 mt-bcTouchButton">
                 Get In Touch
             </button>
         </div>
@@ -34,10 +34,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.bigHeading {
-    font-size: clamp(40px, 8vw, 80px);
-    @apply font-semibold;
-}
 .bcColorFont {
     @apply text-bcColor font-mono font-normal;
     font-size: clamp(14px, 5vw, 16px);

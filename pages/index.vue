@@ -1,7 +1,7 @@
 <template>
     <div>
         <Hero />
-        <GithubElement
+        <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"
             :title="post.title"
@@ -10,9 +10,8 @@
             :id="post.id"
         />
 
-        <About :title="aboutPage.title" :content="aboutPage.content" />
+        <Projects :title="aboutPage.title" :content="aboutPage.content" /> -->
 
-        <button class="bigButton" @click="refresh">Refresh</button>
         <!-- <div class="links">
                 <a
                     href="https://nuxtjs.org/"
@@ -31,14 +30,11 @@
 
 <script>
 import GithubElement from "@/components/GithubElement.vue";
-import About from "@/components/About.vue";
+import Projects from "@/components/Projects.vue";
 export default {
     components: {
         GithubElement,
-        About,
-    },
-    created() {
-        console.log("index.vue");
+        Projects,
     },
     async asyncData(context) {
         let tempPosts = await context.app.$storyapi.get("cdn/stories", {

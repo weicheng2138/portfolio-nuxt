@@ -31,6 +31,21 @@ html {
     @apply outline-bcStyle;
 }
 
+/* Scrollbar Styles */
+/* html {
+    scrollbar-width: thin;
+    scrollbar-color: #495670 #0a192f;
+} */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-track {
+    @apply bg-bgColor;
+}
+body::-webkit-scrollbar-thumb {
+    @apply bg-bcDarkSlate rounded-lg border-bgColor border-8;
+}
+
 body {
     @apply bg-bgColor text-bcSlate font-sans text-bcXl leading-snug;
     margin: 0;
@@ -48,26 +63,78 @@ main {
     min-height: 100vh;
 
     @apply lg:px-36 lg:py-48 md:px-24 md:py-48 sm:px-12 sm:py-36 px-6 py-32;
-    /* 
-    &.fillHeight {
-        padding: 0 150px;
+}
 
-        @media (max-width: 1080px) {
-            padding: 0 100px;
-        }
-        @media (max-width: 768px) {
-            padding: 0 50px;
-        }
-        @media (max-width: 480px) {
-            padding: 0 25px;
-        }
-    } */
+main.fillHeight {
+    @apply lg:px-36 lg:py-0 md:px-24 md:py-0 sm:px-12 sm:py-0 px-6 py-0;
+}
+
+section {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1000px;
+    @apply py-14 sm:py-20;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: #ccd6f6;
+    line-height: 1.1;
+}
+
+.bigHeading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+}
+.mediumHeading {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 60px);
+}
+.numberedHeading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, 32px);
+    white-space: nowrap;
+}
+.numberedHeading:before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    font-size: clamp(16px, 3vw, 20px);
+    @apply font-mono text-bcColor font-normal -mb-bcTabMR mr-bcTabMR sm:mr-3;
+}
+.numberedHeading:after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+}
+
+img,
+svg,
+.gatsby-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 /* Components */
 .bigButton {
     @apply font-mono text-bcColor bg-transparent border border-bcColor 
-    rounded text-bcSm transition duration-250 ease-bcEasing hover:bg-opacity-10 hover:bg-bcColor;
+    rounded transition duration-250 ease-bcEasing hover:bg-opacity-10 hover:bg-bcColor;
     /* border: 1px solid var(--green);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;

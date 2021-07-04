@@ -46,6 +46,26 @@ export default {
 
 <style scoped>
 .loading-page {
-    @apply flex justify-items-center items-center w-full bg-bcDarkNavy;
+    @apply flex justify-items-center items-center bg-bcDarkNavy;
+}
+
+#wei,
+#frame {
+    animation: fadeInUp 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+    }
 }
 </style>

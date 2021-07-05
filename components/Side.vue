@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="side right-side left-auto">
+        <div class="side social">
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Pariatur fugiat nihil atque
             </p>
         </div>
-        <div class="side left-side right-auto">
+        <div class="side email">
             <p>
                 Sit amet consectetur adipisicing elit. Pariatur fugiat nihil
                 atque
@@ -27,5 +27,13 @@ export default {
 <style lang="scss" scoped>
 .side {
     @apply w-10 fixed bottom-0 z-10;
+}
+
+.email {
+    @apply left-auto hidden md:right-sideMd md:flex lg:right-sideLg;
+}
+
+.social {
+    @apply right-auto hidden md:left-sideMd md:flex lg:left-sideLg;
 }
 </style>

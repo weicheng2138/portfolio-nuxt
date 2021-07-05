@@ -73,7 +73,8 @@ module.exports = {
                 bcStyle: ["2px dashed #64ffda", "3px"],
             },
             inset: {
-                side: "40px",
+                sideLg: "40px",
+                sideMd: "20px",
             },
         },
 

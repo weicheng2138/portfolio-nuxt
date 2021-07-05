@@ -56,7 +56,7 @@ a {
     writing-mode: vertical-rl;
     &:hover,
     &:focus {
-        @apply text-bcColor;
+        @apply text-bcColor transition-all;
         transform: translateY(-3px);
     }
 }

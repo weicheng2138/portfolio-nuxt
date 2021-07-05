@@ -3,8 +3,8 @@
         <Loading :isLoading="isLoading" />
         <div class="content" v-if="!isLoading">
             <AppBar />
-            <Side :isHome="isHome" :orientation="'right'" />
-            <Side :isHome="isHome" :orientation="'left'" />
+            <Side :isHome="isHome" />
+            <!-- <Side :isHome="isHome" :orientation="'left'" /> -->
             <main class="fillHeight">
                 <Nuxt />
                 <Footer />

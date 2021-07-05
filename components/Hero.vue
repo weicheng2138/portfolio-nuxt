@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="flex flex-col justify-center items-center min-h-screen p-0">
         <!-- <div class="absolute">
             <span></span>
             <img
@@ -15,7 +15,7 @@
             <h3 class="text-bcColorText bigHeading mt-3 leading-none">
                 I build things for the web.
             </h3>
-            <p class="text-bcColorText mt-5 max-w-heroP">
+            <p class="text-bcColorText mt-5 max-w-lg">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Consectetur quam architecto veniam exercitationem delectus
                 voluptatibus mollitia ipsa officia. Non cumque perspiciatis

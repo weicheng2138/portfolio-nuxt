@@ -76,9 +76,7 @@ module.exports = {
                 side: "40px",
             },
         },
-        height: {
-            navHeight: "100px",
-        },
+
         screens: {
             sm: "480px",
             md: "768px",

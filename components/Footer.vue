@@ -6,7 +6,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div>Designed &amp; Built by Keck Hung</div>
+            <div>Built by Keck Hung</div>
         </a>
 
         <a

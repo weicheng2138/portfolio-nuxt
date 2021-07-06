@@ -36,37 +36,8 @@
                 </NuxtLink>
             </div>
             <div>
-                <div class="flex md:hidden">
-                    <a href="#">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-12 w-12"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7"
-                            />
-                        </svg>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-12 w-12"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                        </svg>
-                    </a>
+                <div class="flex md:hidden" @click="menuOpen = !menuOpen">
+                    <Hamburger :menuOpen="menuOpen" />
                 </div>
 
                 <div class="hidden md:flex">
@@ -92,15 +63,18 @@
 
 <script>
 import { navLinks } from "@/config";
+import Hamburger from "./Hamburger.vue";
 export default {
+    components: { Hamburger },
     data() {
         return {
             navLinks: navLinks,
+            menuOpen: false,
         };
     },
     methods: {
-        testBtn() {
-            console.log(navLinks);
+        openHamburger() {
+            console.log("openHamburger");
         },
     },
 };

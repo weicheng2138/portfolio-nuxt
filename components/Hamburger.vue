@@ -18,27 +18,22 @@ export default {
 <style lang="scss" scoped>
 .menuBtn {
     @apply flex justify-center items-center w-12 h-12 cursor-pointer transition;
-    // transition: all 0.5s ease-in-out;
 }
 .menuBtnBurger {
-    @apply w-10 h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
+    @apply w-bcHamburgerWidth h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
     transition: all 0.5s ease-in-out;
 }
 .menuBtnBurger::before,
 .menuBtnBurger::after {
-    @apply w-10 h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
+    @apply w-bcHamburgerWidth h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
     content: "";
     position: absolute;
 }
 
 .menuBtnBurger::before {
-    // background: #EE2E2B;
-    // transform: translateY(-16px);
     animation: beforeAniOut 0.5s forwards;
 }
 .menuBtnBurger::after {
-    // background: #2B8AEE;
-    // transform: translateY(16px);
     animation: afterAniOut 1s forwards;
 }
 
@@ -48,22 +43,14 @@ export default {
 }
 .menuBtn.open .menuBtnBurger::before {
     animation: beforeAniIn 1s forwards;
-    // animation-name: beforeAni;
-    // animation-duration: 1s;
-    // animation-fill-mode: forwards;
-    // animation-direction: alternate;
 }
 .menuBtn.open .menuBtnBurger::after {
     animation: afterAniIn 1s forwards;
-    // animation-name: afterAni;
-    // animation-duration: 1s;
-    // animation-fill-mode: forwards;
-    // animation-direction: alternate;
 }
 
 @keyframes beforeAniIn {
     0% {
-        transform: translateY(-13px);
+        transform: translateY(-10px);
     }
     50% {
         transform: translate(0px, 0px);
@@ -74,7 +61,7 @@ export default {
 }
 @keyframes afterAniIn {
     0% {
-        transform: translateY(13px);
+        transform: translateY(10px);
     }
     50% {
         transform: translate(0px, 0px);
@@ -91,7 +78,7 @@ export default {
         transform: rotate(0deg);
     }
     100% {
-        transform: translateY(-13px);
+        transform: translateY(-10px);
     }
 }
 @keyframes afterAniOut {
@@ -102,7 +89,7 @@ export default {
         transform: rotate(0deg);
     }
     100% {
-        transform: translateY(13px);
+        transform: translateY(10px);
     }
 }
 </style>

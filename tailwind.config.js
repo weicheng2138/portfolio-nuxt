@@ -58,6 +58,7 @@ module.exports = {
                 bcNavHeight: "100px",
                 bcNavHeightScroll: "70px",
                 bcTabHeight: "42px",
+                bcHamburgerLineHeight: "2px",
             },
             width: {
                 bcTabWidth: "120px",

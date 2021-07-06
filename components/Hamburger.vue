@@ -21,20 +21,14 @@ export default {
     // transition: all 0.5s ease-in-out;
 }
 .menuBtnBurger {
-    width: 40px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
+    @apply w-10 h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
     transition: all 0.5s ease-in-out;
 }
 .menuBtnBurger::before,
 .menuBtnBurger::after {
+    @apply w-10 h-bcHamburgerLineHeight bg-bcColor rounded-bcBorderRadius;
     content: "";
     position: absolute;
-    width: 40px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
 }
 
 .menuBtnBurger::before {

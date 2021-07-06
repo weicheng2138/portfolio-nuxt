@@ -74,7 +74,7 @@ export default {
     },
     methods: {
         openHamburger() {
-            console.log("openHamburger");
+            // console.log("openHamburger");
         },
     },
 };

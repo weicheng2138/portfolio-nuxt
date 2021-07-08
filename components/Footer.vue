@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="flex flex-col justify-center items-center">
         <a
             href="https://github.com/weicheng2138/portfolio-nuxt"
             class="text-gray-300 hover:text-emerald-500"

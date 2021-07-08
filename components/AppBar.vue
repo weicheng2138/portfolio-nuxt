@@ -36,8 +36,8 @@
                 </NuxtLink>
             </div>
             <div>
-                <div class="flex md:hidden" @click="menuOpen = !menuOpen">
-                    <Hamburger :menuOpen="menuOpen" />
+                <div class="flex md:hidden" @click="emitMenuStatus()">
+                    <Hamburger :menuOpen="menuStatus" />
                 </div>
 
                 <div class="hidden md:flex">
@@ -68,13 +68,24 @@ export default {
     components: { Hamburger },
     data() {
         return {
-            navLinks: navLinks,
-            menuOpen: false,
+            menuStatus: false,
         };
     },
+    props: {
+        menuOpen: {
+            type: Boolean,
+            require: true,
+        },
+        navLinks: {
+            type: Array,
+            require: true,
+        },
+    },
     methods: {
-        openHamburger() {
-            // console.log("openHamburger");
+        emitMenuStatus() {
+            // console.log(this.menuStatus);
+            this.menuStatus = !this.menuStatus;
+            this.$emit("eventMenuStatus", this.menuStatus);
         },
     },
 };

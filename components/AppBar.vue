@@ -37,7 +37,7 @@
             </div>
             <div>
                 <div class="flex md:hidden" @click="emitMenuStatus()">
-                    <Hamburger :menuOpen="menuStatus" />
+                    <Hamburger :menuOpen="menuOpen" />
                 </div>
 
                 <div class="hidden md:flex">
@@ -66,11 +66,6 @@ import { navLinks } from "@/config";
 import Hamburger from "./Hamburger.vue";
 export default {
     components: { Hamburger },
-    data() {
-        return {
-            menuStatus: false,
-        };
-    },
     props: {
         menuOpen: {
             type: Boolean,
@@ -83,9 +78,7 @@ export default {
     },
     methods: {
         emitMenuStatus() {
-            // console.log(this.menuStatus);
-            this.menuStatus = !this.menuStatus;
-            this.$emit("eventMenuStatus", this.menuStatus);
+            this.$emit("eventMenuStatus", !this.menuOpen);
         },
     },
 };

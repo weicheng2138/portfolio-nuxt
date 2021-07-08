@@ -8,7 +8,12 @@
                 @eventMenuStatus="changeMenuStatus"
                 class="z-50 relative"
             />
-            <Drawer :open="menuOpen" :navLinks="navLinks" class="z-40 fixed" />
+            <Drawer
+                :open="menuOpen"
+                :navLinks="navLinks"
+                @eventCloseDrawer="changeMenuStatus"
+                class="z-40 fixed"
+            />
             <Side :isHome="isHome" class="z-30 relative" />
 
             <main class="fillHeight relative z-20">

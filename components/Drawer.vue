@@ -16,7 +16,10 @@
         "
         :class="{ translateDrawer: open }"
     >
-        <nav class="flex flex-col items-center justify-center w-full h-full">
+        <nav
+            class="flex flex-col items-center justify-center w-full h-full"
+            @click="emitCloseDrawer()"
+        >
             <NuxtLink
                 v-for="(link, index) in navLinks"
                 :key="link.name"
@@ -41,6 +44,11 @@ export default {
         navLinks: {
             type: Array,
             require: true,
+        },
+    },
+    methods: {
+        emitCloseDrawer() {
+            this.$emit("eventCloseDrawer", false);
         },
     },
 };

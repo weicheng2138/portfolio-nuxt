@@ -27,15 +27,15 @@ module.exports = {
         },
         {
             name: "Experience",
-            url: "/#jobs",
+            url: "/#alex",
         },
         {
             name: "Work",
-            url: "/#projects",
+            url: "/#john",
         },
         {
             name: "Contact",
-            url: "/#contact",
+            url: "/#alex",
         },
     ],
 

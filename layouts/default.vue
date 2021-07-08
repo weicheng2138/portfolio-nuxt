@@ -2,10 +2,12 @@
     <div id="root">
         <Loading :isLoading="isLoading" />
         <div class="content" v-if="!isLoading">
-            <AppBar />
-            <Side :isHome="isHome" />
+            <AppBar class="z-50" />
+            <Side :isHome="isHome" class="z-40" />
             <!-- <Side :isHome="isHome" :orientation="'left'" /> -->
-            <main class="fillHeight">
+
+            <main class="fillHeight relative z-30">
+                <div class="inherit fixed inset-0"></div>
                 <Nuxt />
                 <Footer />
             </main>

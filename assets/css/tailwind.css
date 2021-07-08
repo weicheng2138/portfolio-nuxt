@@ -134,7 +134,8 @@ svg,
 /* Components */
 .bigButton {
     @apply font-mono text-bcColor bg-transparent border border-bcColor 
-    rounded transition duration-250 ease-bcEasing hover:bg-opacity-10 hover:bg-bcColor;
+    rounded transition duration-250 ease-bcEasing hover:bg-opacity-10 hover:bg-bcColor
+    focus:outline-none;
     /* border: 1px solid var(--green);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;

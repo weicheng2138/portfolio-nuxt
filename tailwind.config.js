@@ -29,6 +29,8 @@ module.exports = {
                 bcTabMR: "5px",
                 bcTabP: "10px",
                 bcTouchButton: "50px",
+                bcNavHeight: "100px",
+                bcNavScrollHeight: "70px",
             },
             colors: {
                 emerald: colors.emerald,
@@ -56,7 +58,7 @@ module.exports = {
             },
             height: {
                 bcNavHeight: "100px",
-                bcNavHeightScroll: "70px",
+                bcNavScrollHeight: "70px",
                 bcTabHeight: "42px",
                 bcHamburgerLineHeight: "2px",
             },

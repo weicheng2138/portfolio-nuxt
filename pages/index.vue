@@ -1,6 +1,11 @@
 <template>
     <div>
         <Hero />
+        <Hero />
+        <Hero />
+        <Hero id="alex" />
+        <Hero />
+        <Hero id="john" />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"

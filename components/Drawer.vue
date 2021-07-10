@@ -1,16 +1,16 @@
 <template>
     <div
         class="
+            drawer
             bg-bcLightNavy
             text-bcLightestSlate
-            w-64
             fixed
             inset-y-0
             right-0
             transform
             translate-x-full
             transition
-            duration-200
+            duration-300
             ease-in-out
             h-screen
         "
@@ -28,7 +28,7 @@
             "
         >
             <NuxtLink
-                v-for="(link, index) in navLinks"
+                v-for="link in navLinks"
                 :key="link.name"
                 :to="{ path: link.url }"
                 class="
@@ -74,6 +74,8 @@ export default {
 <style lang="scss" scoped>
 .translateDrawer {
     @apply transform translate-x-0;
+}
+.drawer {
     width: min(75vw, 400px);
 }
 .linkParent {

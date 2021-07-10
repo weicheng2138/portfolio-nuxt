@@ -14,15 +14,10 @@
             <main class="fillHeight relative z-20">
                 <div
                     v-if="menuOpen"
-                    class="
-                        inherit
-                        fixed
-                        inset-0
-                        backdrop-filter backdrop-blur-sm
-                    "
+                    class="fixed z-20 inset-0 backdrop-filter backdrop-blur-sm"
                     @click="changeMenuStatus"
                 ></div>
-                <Nuxt />
+                <Nuxt class="z-0" />
                 <Footer />
             </main>
         </div>

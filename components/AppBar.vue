@@ -97,9 +97,6 @@ export default {
             this.$emit("eventMenuStatus", !this.menuOpen);
         },
         onResize() {
-            console.log(this.windowInnerWidth);
-            console.log(window.innerWidth);
-            console.log(this.menuOpen);
             if (this.menuOpen === true && window.innerWidth >= "768") {
                 this.emitMenuStatus();
             }

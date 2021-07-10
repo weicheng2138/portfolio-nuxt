@@ -16,17 +16,37 @@
         "
         :class="{ translateDrawer: open }"
     >
-        <div class="flex flex-col items-center justify-center w-full h-full">
+        <div
+            class="
+                linkParent
+                flex flex-col
+                items-center
+                justify-center
+                w-full
+                h-full
+                text-center
+            "
+        >
             <NuxtLink
                 v-for="(link, index) in navLinks"
                 :key="link.name"
                 :to="{ path: link.url }"
-                class="linkParent navBtn mb-7"
+                class="
+                    linkElement
+                    navBtn
+                    mb-7
+                    focus:outline-none
+                    hover:text-bcColor
+                "
                 @click.native="emitCloseDrawer()"
             >
-                <div class="linkElement">{{ link.name }}</div>
+                {{ link.name }}
             </NuxtLink>
-            <button class="bigButton text-bcXs ml-4 py-2 px-4">Resume</button>
+            <button
+                class="bigButton text-bcXs py-4 px-12 mx-auto mt-8 min-w-max"
+            >
+                Resume
+            </button>
         </div>
     </div>
 </template>
@@ -54,12 +74,17 @@ export default {
 <style lang="scss" scoped>
 .translateDrawer {
     @apply transform translate-x-0;
+    width: min(75vw, 400px);
 }
 .linkParent {
-    counter-reset: num;
+    list-style: none;
+}
+.linkElement {
+    counter-increment: num;
+    font-size: clamp(14px, 4vw, 18px);
 }
 .linkElement::before {
-    counter-increment: num;
+    @apply text-bcColor block text-bcSm cursor-default;
     content: "0" counter(num) ".";
 }
 </style>

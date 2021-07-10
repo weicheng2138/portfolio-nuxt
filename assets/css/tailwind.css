@@ -155,3 +155,11 @@ svg,
         display: none !important;
     } */
 }
+.enter {
+    @apply opacity-100 transform translate-y-0;
+    /* opacity: 1; */
+    /* transform: translateY(0); */
+}
+.before-enter {
+    @apply opacity-0 transform translate-y-36;
+}

@@ -5,7 +5,7 @@
             <AppBar
                 :menuOpen="menuOpen"
                 :navLinks="navLinks"
-                @eventMenuStatus="changeMenuStatus"
+                @eventMenuStatus="updateMenuStatus"
                 class="z-40 relative"
             />
 
@@ -20,6 +20,7 @@
                         inset-0
                         backdrop-filter backdrop-blur-sm
                     "
+                    @click="changeMenuStatus"
                 ></div>
                 <Nuxt />
                 <Footer />
@@ -47,8 +48,11 @@ export default {
         }, 2000);
     },
     methods: {
-        changeMenuStatus(bool) {
+        updateMenuStatus(bool) {
             this.menuOpen = bool;
+        },
+        changeMenuStatus() {
+            this.menuOpen = !this.menuOpen;
         },
     },
 };

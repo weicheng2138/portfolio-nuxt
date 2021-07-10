@@ -1,5 +1,16 @@
 <template>
-    <section class="flex flex-col justify-center items-center min-h-screen p-0">
+    <section
+        class="
+            flex flex-col
+            justify-center
+            items-center
+            min-h-screen
+            p-0
+            transition-all
+            duration-300
+            ease-in-out
+        "
+    >
         <!-- <div class="absolute">
             <span></span>
             <img

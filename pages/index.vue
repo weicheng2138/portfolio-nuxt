@@ -1,8 +1,8 @@
 <template>
     <div>
-        <Hero />
-        <Hero />
-        <Hero />
+        <Hero v-animate-on-scroll />
+        <Hero v-animate-on-scroll />
+        <Hero v-animate-on-scroll />
         <Hero id="alex" />
         <Hero />
         <Hero id="john" />

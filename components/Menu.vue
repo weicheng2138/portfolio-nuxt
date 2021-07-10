@@ -1,6 +1,8 @@
 <template>
-    <div class="menuBtn" :class="{ open: menuOpen }">
-        <div class="menuBtnBurger"></div>
+    <div>
+        <div class="menuBtn z-50" :class="{ open: menuOpen }">
+            <div class="menuBtnBurger"></div>
+        </div>
     </div>
 </template>
 
@@ -10,6 +12,15 @@ export default {
         menuOpen: {
             type: Boolean,
             require: true,
+        },
+        navLinks: {
+            type: Array,
+            require: true,
+        },
+    },
+    methods: {
+        test() {
+            this.$emit("testStatus");
         },
     },
 };

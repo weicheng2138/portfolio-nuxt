@@ -6,14 +6,9 @@
                 :menuOpen="menuOpen"
                 :navLinks="navLinks"
                 @eventMenuStatus="changeMenuStatus"
-                class="z-50 relative"
+                class="z-40 relative"
             />
-            <Drawer
-                :open="menuOpen"
-                :navLinks="navLinks"
-                @eventCloseDrawer="changeMenuStatus"
-                class="z-40 fixed"
-            />
+
             <Side :isHome="isHome" class="z-30 relative" />
 
             <main class="fillHeight relative z-20">
@@ -52,7 +47,7 @@ export default {
         }, 2000);
     },
     methods: {
-        changeMenuStatus: function (bool) {
+        changeMenuStatus(bool) {
             this.menuOpen = bool;
         },
     },

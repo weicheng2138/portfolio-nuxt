@@ -36,9 +36,18 @@
                 </NuxtLink>
             </div>
             <div>
-                <div class="flex md:hidden" @click="emitMenuStatus()">
-                    <Hamburger :menuOpen="menuOpen" />
-                </div>
+                <Menu
+                    class="md:hidden relative z-50"
+                    :menuOpen="menuOpen"
+                    :navLinks="navLinks"
+                    @click.native="emitMenuStatus()"
+                />
+                <Drawer
+                    class="z-0 md:hidden"
+                    :open="menuOpen"
+                    :navLinks="navLinks"
+                    @eventCloseDrawer="emitMenuStatus()"
+                />
 
                 <div class="hidden md:flex">
                     <NuxtLink
@@ -58,12 +67,12 @@
                 </div>
             </div>
         </nav>
+        <!-- <Drawer :open="menuOpen" :navLinks="navLinks" /> -->
     </div>
 </template>
 
 <script>
-import { navLinks } from "@/config";
-import Hamburger from "./Hamburger.vue";
+import Hamburger from "./Menu.vue";
 export default {
     components: { Hamburger },
     props: {
@@ -76,9 +85,24 @@ export default {
             require: true,
         },
     },
+    mounted() {
+        // Register an event listener when the Vue component is ready
+        window.addEventListener("resize", this.onResize);
+    },
+    destroyed() {
+        window.removeEventListener("resize", this.myEventHandler);
+    },
     methods: {
         emitMenuStatus() {
             this.$emit("eventMenuStatus", !this.menuOpen);
+        },
+        onResize() {
+            console.log(this.windowInnerWidth);
+            console.log(window.innerWidth);
+            console.log(this.menuOpen);
+            if (this.menuOpen === true && window.innerWidth >= "768") {
+                this.emitMenuStatus();
+            }
         },
     },
 };
@@ -87,7 +111,7 @@ export default {
 <style lang="scss" scoped>
 nav {
     @apply fixed flex justify-between items-center w-full font-mono h-bcNavHeight  
-    px-6 md:px-10 lg:px-12 backdrop-filter backdrop-blur-sm  shadow-appbar;
+    px-6 md:px-10 lg:px-12 backdrop-filter backdrop-blur-sm shadow-appbar;
 
     .logo {
         @apply fill-current text-bcColor;

@@ -1,7 +1,6 @@
 <template>
     <div
         class="
-            sideBar
             bg-bcLightNavy
             text-bcLightestSlate
             w-64
@@ -13,24 +12,22 @@
             transition
             duration-200
             ease-in-out
+            h-screen
         "
         :class="{ translateDrawer: open }"
     >
-        <nav
-            class="flex flex-col items-center justify-center w-full h-full"
-            @click="emitCloseDrawer()"
-        >
+        <div class="flex flex-col items-center justify-center w-full h-full">
             <NuxtLink
                 v-for="(link, index) in navLinks"
                 :key="link.name"
                 :to="{ path: link.url }"
-                class="navBtn"
+                class="linkParent navBtn mb-7"
+                @click.native="emitCloseDrawer()"
             >
-                <span class="text-bcColor font-normal">0{{ index + 1 }}. </span>
-                {{ link.name }}
+                <div class="linkElement">{{ link.name }}</div>
             </NuxtLink>
             <button class="bigButton text-bcXs ml-4 py-2 px-4">Resume</button>
-        </nav>
+        </div>
     </div>
 </template>
 
@@ -48,7 +45,7 @@ export default {
     },
     methods: {
         emitCloseDrawer() {
-            this.$emit("eventCloseDrawer", false);
+            this.$emit("eventCloseDrawer");
         },
     },
 };
@@ -57,5 +54,12 @@ export default {
 <style lang="scss" scoped>
 .translateDrawer {
     @apply transform translate-x-0;
+}
+.linkParent {
+    counter-reset: num;
+}
+.linkElement::before {
+    counter-increment: num;
+    content: "0" counter(num) ".";
 }
 </style>

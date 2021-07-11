@@ -12,10 +12,10 @@
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="feather feather-github"
+                    stroke-width="2"
                 >
                     <title>GitHub</title>
                     <path
@@ -34,7 +34,7 @@
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    stroke-width="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="feather feather-instagram"
@@ -69,6 +69,7 @@
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="feather feather-linkedin"
+                    stroke-width="2"
                 >
                     <title>LinkedIn</title>
                     <path
@@ -89,7 +90,7 @@
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    stroke-width="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="feather feather-codepen"
@@ -134,7 +135,7 @@ export default {
 
 <style lang="scss" scoped>
 .side {
-    @apply w-10 fixed bottom-0 z-10;
+    @apply w-10 fixed bottom-0 z-10 font-medium;
 }
 
 .email {

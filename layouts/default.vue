@@ -15,7 +15,7 @@
                 <overlay
                     v-if="menuOpen"
                     class="z-20"
-                    @click="changeMenuStatus"
+                    @click.native="changeMenuStatus"
                 ></overlay>
                 <Nuxt class="z-0" />
                 <Footer />
@@ -43,10 +43,8 @@ export default {
             this.isLoading = false;
         }, 2000);
     },
-    methods: {
-        updateMenuStatus(bool) {
-            this.menuOpen = bool;
-            console.log(this.menuOpen);
+    watch: {
+        menuOpen: function () {
             if (this.menuOpen) {
                 document
                     .querySelector("body")
@@ -56,6 +54,11 @@ export default {
                     .querySelector("body")
                     .setAttribute("style", "overflow:auto");
             }
+        },
+    },
+    methods: {
+        updateMenuStatus(bool) {
+            this.menuOpen = bool;
         },
         changeMenuStatus() {
             this.menuOpen = !this.menuOpen;

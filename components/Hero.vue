@@ -22,9 +22,9 @@
                 sapiente assumenda quod totam iusto voluptatum maxime est
                 asperiores!
             </p>
-            <button class="bigButton text-bcSm py-5 px-7 mt-bcTouchButton">
+            <a class="bigButton text-bcSm py-5 px-7 mt-bcTouchButton">
                 Get In Touch
-            </button>
+            </a>
         </div>
     </section>
 </template>

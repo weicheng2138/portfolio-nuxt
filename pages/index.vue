@@ -1,8 +1,7 @@
 <template>
     <div>
         <Hero v-animate-on-scroll />
-        <Hero v-animate-on-scroll />
-        <Hero v-animate-on-scroll />
+
         <Hero id="alex" />
         <Hero />
         <Hero id="john" />
@@ -41,6 +40,7 @@ export default {
         GithubElement,
         Projects,
     },
+    scrollToTop: true,
     async asyncData(context) {
         let tempPosts = await context.app.$storyapi.get("cdn/stories", {
             version: "draft",

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap");
 @import url("http://fonts.cdnfonts.com/css/sf-mono");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -82,18 +83,15 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 10px 0;
     font-weight: 600;
     color: #ccd6f6;
     line-height: 1.1;
 }
 
 .bigHeading {
-    margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(40px, 8vw, 70px);
 }
 .mediumHeading {
-    margin: 0;
     font-size: clamp(40px, 8vw, 60px);
 }
 .numberedHeading {
@@ -166,18 +164,21 @@ svg,
 .before-enter {
     @apply opacity-0 transform translate-y-36;
 }
-
 .fade-down {
     @apply opacity-100 transform translate-y-0;
 }
 .before-fade-down {
     @apply opacity-0 transform -translate-y-5;
 }
-
+.fade-up {
+    @apply opacity-100 transform translate-y-0;
+}
+.before-fade-up {
+    @apply opacity-0 transform translate-y-5;
+}
 .fade {
     @apply opacity-100;
 }
-
 .before-fade {
     @apply opacity-0;
 }

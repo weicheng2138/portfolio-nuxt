@@ -13,7 +13,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 mono: ["SF Mono", "Fira Code", "sans-serif"],
-                sans: ["Calibre", "San Francisco", "SF Pro Text"],
+                sans: ["Calibri", "San Francisco", "SF Pro Text"],
             },
             fontSize: {
                 bcXxs: "12px",

@@ -10,13 +10,21 @@ const animateOnScrollObserver = new IntersectionObserver(
                 if (entry.target.classList.contains("before-fade-down")) {
                     entry.target.classList.remove("before-fade-down");
                     entry.target.classList.add("fade-down");
-                } else if (entry.target.classList.contains("before-enter")) {
-                    entry.target.classList.remove("before-enter");
-                    entry.target.classList.add("enter");
+                } else if (entry.target.classList.contains("before-fade-up")) {
+                    entry.target.classList.remove("before-fade-up");
+                    entry.target.classList.add("fade-up");
                 } else if (entry.target.classList.contains("before-fade")) {
                     entry.target.classList.remove("before-fade");
                     entry.target.classList.add("fade");
+                    // Scroll Observe
+                } else if (entry.target.classList.contains("before-enter")) {
+                    entry.target.classList.remove("before-enter");
+                    entry.target.classList.add("enter");
                 }
+                setTimeout(() => {
+                    console.log("setTimeout");
+                    entry.target.style.transitionDelay = "0ms";
+                }, 2500);
                 animateOnScrollObserver.unobserve(entry.target);
             }
         });
@@ -43,6 +51,8 @@ Vue.directive("animate-delay", {
             el.classList.add("before-fade");
         } else if (binding.arg === "fade-down") {
             el.classList.add("before-fade-down");
+        } else if (binding.arg === "fade-up") {
+            el.classList.add("before-fade-up");
         }
     },
 });

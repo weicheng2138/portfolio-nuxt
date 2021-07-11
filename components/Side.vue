@@ -105,7 +105,7 @@
                 </svg>
             </a>
         </div>
-        <div v-animate-delay:fade="2100" class="side email">
+        <div v-animate-delay:fade="2050" class="side email">
             <a v-bind:href="`mailto:${email}`">{{ email }}</a>
         </div>
     </div>

@@ -2,9 +2,6 @@
     <div>
         <Hero v-animate-on-scroll />
 
-        <Hero id="alex" />
-        <Hero />
-        <Hero id="john" />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"

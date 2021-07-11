@@ -41,7 +41,7 @@ export default {
     mounted() {
         setTimeout(() => {
             this.isLoading = false;
-        }, 1000000);
+        }, 2000);
     },
     watch: {
         menuOpen: function () {

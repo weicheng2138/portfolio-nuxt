@@ -122,11 +122,10 @@ h6 {
 }
 
 img,
-svg,
-.gatsby-image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    vertical-align: middle;
+svg {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* vertical-align: middle; */
 }
 
 /* Components */

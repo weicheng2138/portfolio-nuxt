@@ -1,9 +1,9 @@
 <template lang="html">
     <div class="loading-page" v-if="isLoading">
         <svg
-                        width="100"
-                        height="100"
-                        viewBox="0 0 100 100"
+                        width="200"
+                        height="200"
+                        viewBox="-50 -50 200 200"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
         >
@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .loading-page {
-    @apply flex justify-items-center items-center bg-bcDarkNavy;
+    @apply flex justify-center items-center bg-bcDarkNavy;
 }
 
 #wei,

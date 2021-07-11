@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Hero v-animate-on-scroll />
+        <SectionsHero v-animate-on-scroll />
 
         <!-- <GithubElement
             v-for="post in posts"
@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import GithubElement from "@/components/GithubElement.vue";
-import Projects from "@/components/Projects.vue";
+import GithubElement from "~/components/sections/GithubElement.vue";
+import Projects from "~/components/sections/Projects.vue";
 export default {
     components: {
         GithubElement,

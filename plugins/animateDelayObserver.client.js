@@ -22,7 +22,6 @@ const animateOnScrollObserver = new IntersectionObserver(
                     entry.target.classList.add("enter");
                 }
                 setTimeout(() => {
-                    console.log("setTimeout");
                     entry.target.style.transitionDelay = "0ms";
                 }, 2500);
                 animateOnScrollObserver.unobserve(entry.target);

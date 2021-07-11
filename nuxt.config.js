@@ -11,7 +11,7 @@ export default {
             },
             {
                 hid: "description",
-                name: "description",
+                name: "portfolio",
                 content: "Portfolio practice for weicheng hung",
             },
         ],

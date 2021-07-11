@@ -53,6 +53,7 @@ Before I start the job, there are something need to be done.
 
     - asyncData() can not be used in components, components take only pure vue stuff.
     - Normal spa mode will load empty dom, but not universal mode (SSR). SSR web will load dom at the beginning. SSR will evalute the vue component in the server (SEO purpose for existing DOM). After the first load (refresh), it will run on client side (Turn to be SPA), including nuxt-link and router.
+    - Components in folder where you put your section in will auto import with the proper name in template such as components/sections/comp.vue => <SectionsComp />
 
 ## Build Setup
 

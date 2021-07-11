@@ -8,6 +8,7 @@
                     viewBox="0 0 100 100"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    v-animate-delay:fade="0"
                 >
                     <g id="weiLogo">
                         <path
@@ -36,6 +37,7 @@
         </div>
         <div>
             <Menu
+                v-animate-delay:fade="0"
                 class="md:hidden relative z-50"
                 :menuOpen="menuOpen"
                 :navLinks="navLinks"
@@ -54,13 +56,17 @@
                     :key="link.name"
                     :to="{ path: link.url }"
                     class="navBtn"
+                    v-animate-delay:fade-down="index * 100"
                 >
                     <span class="text-bcColor font-normal"
                         >0{{ index + 1 }}.
                     </span>
                     {{ link.name }}
                 </NuxtLink>
-                <button class="bigButton text-bcXs ml-4 py-2 px-4">
+                <button
+                    v-animate-delay:fade-down="500"
+                    class="bigButton text-bcXs ml-4 py-2 px-4"
+                >
                     Resume
                 </button>
             </div>

@@ -155,10 +155,29 @@ svg,
         display: none !important;
     } */
 }
+
+/* Directives */
+.transition {
+    @apply transition-all duration-300 ease-in-out;
+}
 .enter {
     @apply opacity-100 transform translate-y-0;
-    /* opacity: 1; */
 }
 .before-enter {
     @apply opacity-0 transform translate-y-36;
+}
+
+.fade-down {
+    @apply opacity-100 transform translate-y-0;
+}
+.before-fade-down {
+    @apply opacity-0 transform -translate-y-5;
+}
+
+.fade {
+    @apply opacity-100;
+}
+
+.before-fade {
+    @apply opacity-0;
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="side social">
+        <div v-animate-delay:fade="2000" class="side social">
             <a
                 v-bind:href="`${socialMedia[0].url}`"
                 target="_blank"
@@ -105,7 +105,7 @@
                 </svg>
             </a>
         </div>
-        <div class="side email">
+        <div v-animate-delay:fade="2100" class="side email">
             <a v-bind:href="`mailto:${email}`">{{ email }}</a>
         </div>
     </div>

@@ -12,11 +12,11 @@
             <Side :isHome="isHome" class="z-30 relative" />
 
             <main class="fillHeight relative z-20">
-                <div
+                <overlay
                     v-if="menuOpen"
-                    class="fixed z-20 inset-0 backdrop-filter backdrop-blur-sm"
+                    class="z-20"
                     @click="changeMenuStatus"
-                ></div>
+                ></overlay>
                 <Nuxt class="z-0" />
                 <Footer />
             </main>
@@ -27,8 +27,9 @@
 <script>
 import Loading from "~/pages/Loading.vue";
 import { navLinks } from "@/config";
+import Overlay from "~/components/Overlay.vue";
 export default {
-    components: { Loading },
+    components: { Loading, Overlay },
     data() {
         return {
             isLoading: true,
@@ -45,6 +46,16 @@ export default {
     methods: {
         updateMenuStatus(bool) {
             this.menuOpen = bool;
+            console.log(this.menuOpen);
+            if (this.menuOpen) {
+                document
+                    .querySelector("body")
+                    .setAttribute("style", "overflow:hidden");
+            } else {
+                document
+                    .querySelector("body")
+                    .setAttribute("style", "overflow:auto");
+            }
         },
         changeMenuStatus() {
             this.menuOpen = !this.menuOpen;

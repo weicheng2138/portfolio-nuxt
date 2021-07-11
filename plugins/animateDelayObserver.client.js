@@ -40,10 +40,8 @@ Vue.directive("animate-delay", {
         animateOnScrollObserver.observe(el);
 
         if (binding.arg === "fade") {
-            console.log(binding.arg);
             el.classList.add("before-fade");
         } else if (binding.arg === "fade-down") {
-            console.log(binding.arg);
             el.classList.add("before-fade-down");
         }
     },

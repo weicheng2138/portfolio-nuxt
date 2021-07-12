@@ -77,6 +77,10 @@ section {
     @apply py-14 sm:py-20;
 }
 
+.imgWrapper {
+    @apply align-middle;
+}
+
 h1,
 h2,
 h3,
@@ -89,43 +93,27 @@ h6 {
 }
 
 .bigHeading {
-    font-size: clamp(40px, 8vw, 70px);
-}
-.mediumHeading {
     font-size: clamp(40px, 8vw, 60px);
 }
+.mediumHeading {
+    font-size: clamp(40px, 8vw, 50px);
+}
 .numberedHeading {
-    display: flex;
-    align-items: center;
-    position: relative;
+    @apply items-center flex relative w-full;
     margin: 10px 0 40px;
-    width: 100%;
     font-size: clamp(26px, 5vw, 32px);
     white-space: nowrap;
 }
 .numberedHeading:before {
-    position: relative;
-    bottom: 4px;
     counter-increment: section;
     content: "0" counter(section) ".";
     font-size: clamp(16px, 3vw, 20px);
-    @apply font-mono text-bcColor font-normal -mb-bcTabMR mr-bcTabMR sm:mr-3;
+    @apply relative font-mono text-bcColor font-normal -mb-bcTabMR mr-bcTabMR sm:mr-3;
 }
 .numberedHeading:after {
     content: "";
-    display: block;
-    position: relative;
-    top: -5px;
-    width: 300px;
-    height: 1px;
-    margin-left: 20px;
-}
-
-img,
-svg {
-    /* width: 100%; */
-    /* max-width: 100%; */
-    /* vertical-align: middle; */
+    @apply block relative  w-full h-[1px] ml-[10px] bg-bcLightestNavy
+    md:w-[200px] lg:w-[300px];
 }
 
 /* Components */

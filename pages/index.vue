@@ -2,6 +2,7 @@
     <div>
         <SectionsHero v-animate-on-scroll />
 
+        <SectionsAbout />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"
@@ -30,13 +31,7 @@
 </template>
 
 <script>
-import GithubElement from "~/components/sections/GithubElement.vue";
-import Projects from "~/components/sections/Projects.vue";
 export default {
-    components: {
-        GithubElement,
-        Projects,
-    },
     scrollToTop: true,
     async asyncData(context) {
         let tempPosts = await context.app.$storyapi.get("cdn/stories", {

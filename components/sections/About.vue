@@ -75,13 +75,11 @@ li:before {
 
         img {
             filter: none;
-            mix-blend-mode: normal;
         }
     }
 
     img {
         @apply relative rounded-xl transition-all z-50;
-        mix-blend-mode: multiply;
         filter: grayscale(100%) contrast(1);
     }
 
@@ -93,7 +91,6 @@ li:before {
 
     &:before {
         @apply top-0 left-0  bg-bgColor z-50;
-        mix-blend-mode: screen;
     }
 
     &:after {

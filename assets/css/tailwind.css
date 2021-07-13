@@ -59,12 +59,8 @@ body {
 }
 
 main {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1600px;
-    min-height: 100vh;
-
-    @apply lg:px-36 lg:py-48 md:px-24 md:py-48 sm:px-12 sm:py-36 px-6 py-32;
+    @apply lg:px-36 lg:py-48 lg:w-full lg:max-w-[1600px] lg:min-h-screen lg:my-0 lg:mx-auto
+    md:px-24 md:py-48 sm:px-12 sm:py-36 px-6 py-32;
 }
 
 main.fillHeight {
@@ -72,10 +68,7 @@ main.fillHeight {
 }
 
 section {
-    margin: 0 auto;
-    padding: 100px 0;
-    max-width: 1000px;
-    @apply py-14 sm:py-20;
+    @apply py-16 px-0 sm:py-20 md:my-0 md:mx-auto md:py-24 md:max-w-5xl;
 }
 
 img,

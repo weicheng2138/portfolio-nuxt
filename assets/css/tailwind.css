@@ -53,6 +53,7 @@ body {
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    counter-reset: section;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

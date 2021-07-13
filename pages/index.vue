@@ -3,6 +3,8 @@
         <SectionsHero v-animate-on-scroll />
 
         <SectionsAbout />
+
+        <SectionsJobs />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"

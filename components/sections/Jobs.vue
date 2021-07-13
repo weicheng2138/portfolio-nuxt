@@ -16,7 +16,7 @@
                     }"
                 ></span>
             </div>
-            <div class="content">
+            <div class="inner">
                 <transition name="fade">
                     <div id="0" v-if="actvieTabId === 0" class="absolute">
                         <h3>
@@ -168,6 +168,15 @@ button {
     @apply relative w-full h-auto py-[10px] px-1;
     h3 {
         @apply mb-[2px] text-bcXl font-medium	leading-tight md:text-bcXxl;
+    }
+    p {
+        @apply mb-6 text-bcLightSlate font-mono text-xs;
+    }
+}
+.inner {
+    @apply w-full relative h-auto py-[10px] px-1;
+    h3 {
+        @apply mb-[2px] text-bcXl font-medium leading-tight md:text-bcXxl;
     }
     p {
         @apply mb-6 text-bcLightSlate font-mono text-xs;

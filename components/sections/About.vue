@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-900 mb-[-12rem]">
+    <section class="max-w-900 h-auto">
         <h2 class="numberedHeading">About Me</h2>
         <div class="block md:grid grid-flow-col grid-cols-5 grid-rows-1 gap-12">
             <div class="col-span-3">

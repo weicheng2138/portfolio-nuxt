@@ -1,10 +1,10 @@
 <template>
     <div>
-        <SectionsHero v-animate-on-scroll />
+        <SectionsHero id="hero" v-animate-on-scroll />
 
-        <SectionsAbout />
+        <SectionsAbout id="about" v-animate-on-scroll />
 
-        <SectionsJobs />
+        <SectionsJobs id="jobs" v-animate-on-scroll />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"

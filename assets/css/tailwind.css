@@ -77,7 +77,8 @@ section {
     @apply py-14 sm:py-20;
 }
 
-.imgWrapper {
+img,
+svg {
     @apply align-middle;
 }
 

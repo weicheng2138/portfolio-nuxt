@@ -37,7 +37,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-span-2 max-w-[300px] imgWrapper">
+            <div class="col-span-2 max-w-[300px] mt-6 mb-60 mx-auto imgWrapper">
                 <img src="~/static/img/me_with-back-ground.png" />
             </div>
         </div>
@@ -60,7 +60,7 @@ p {
 }
 li:before {
     content: "▹";
-    @apply absolute left-0 text-bcColor text-bcSm leading-3;
+    @apply absolute left-0 text-bcColor text-bcSm leading-3 overflow-hidden;
 }
 
 .imgWrapper {

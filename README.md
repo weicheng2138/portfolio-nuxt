@@ -56,7 +56,12 @@ Before I start the job, there are something need to be done.
     - Normal spa mode will load empty dom, but not universal mode (SSR). SSR web will load dom at the beginning. SSR will evalute the vue component in the server (SEO purpose for existing DOM). After the first load (refresh), it will run on client side (Turn to be SPA), including nuxt-link and router.
     - Components in folder where you put your section in will auto import with the proper name in template such as components/sections/comp.vue => <SectionsComp />
 
-6. 🐛 Bugs Note
+6. Tips of Vue
+
+    - Do not trying to replace the vue component property from normal function to arrow function. Because vue has already actively point **this** to the vue component. If you replace the function with arrow function, **this** will point to the prior parent which is window.
+    - Transition wrapper component can not include multiple elements.
+
+7. 🐛 Bugs Note
 
     - About selfie div height with weird height which make the range between section 3 too long.
     - Mix-blend-mode conflicts with backdrop blur. You can't use both of then in the same view area. Although I try to manually turn it off by the event listening.

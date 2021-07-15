@@ -153,7 +153,7 @@ export default {
         writing-mode: vertical-rl;
         &:hover,
         &:focus {
-            @apply text-bcColor transition-all;
+            @apply text-bcColor transition duration-500 ease-bcEasing;
             transform: translateY(-3px);
         }
     }
@@ -176,7 +176,7 @@ export default {
 
         &:hover,
         &:focus {
-            @apply text-bcColor transition-all;
+            @apply text-bcColor transition duration-500 ease-bcEasing;
             transform: translateY(-3px);
         }
         svg {

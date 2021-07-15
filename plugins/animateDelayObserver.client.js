@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 // threshold is the poportion of the element in the browser view
-const options = { threshold: [0.4] };
+const options = { threshold: [0.2] };
 const animateOnScrollObserver = new IntersectionObserver(
     (entries, animateOnScrollObserver) => {
         entries.forEach((entry) => {

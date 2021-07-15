@@ -111,6 +111,15 @@ h6 {
     md:w-[200px] lg:w-[300px];
 }
 
+.numberedContactHeading {
+    @apply font-mono mt-3 mx-0 mb-5  whitespace-nowrap text-bcLg text-bcColor;
+}
+.numberedContactHeading:before {
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    @apply relative font-mono text-bcColor font-normal -mb-bcTabMR mr-bcTabMR sm:mr-3;
+}
+
 /* Components */
 .bigButton {
     @apply font-mono text-bcColor bg-transparent border border-bcColor 

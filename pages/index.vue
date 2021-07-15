@@ -5,6 +5,10 @@
         <SectionsAbout id="about" v-animate-on-scroll />
 
         <SectionsJobs id="jobs" v-animate-on-scroll />
+
+        <SectionsProjects id="projects" v-animate-on-scroll />
+
+        <SectionsContact id="contact" v-animate-on-scroll />
         <!-- <GithubElement
             v-for="post in posts"
             :key="post.id"

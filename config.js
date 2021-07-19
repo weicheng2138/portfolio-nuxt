@@ -30,14 +30,16 @@ module.exports = {
             url: "/#jobs",
         },
         {
-            name: "Work",
-            url: "/#john",
+            name: "Works",
+            url: "/#works",
         },
         {
             name: "Contact",
-            url: "/#alex",
+            url: "/#contact",
         },
     ],
+
+    projectNames: ["portfolio-nuxt", "vue-electron"],
 
     colors: {
         green: "#64ffda",

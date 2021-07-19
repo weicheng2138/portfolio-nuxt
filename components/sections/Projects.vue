@@ -11,7 +11,7 @@
                         filter
                         opacity-20
                         grayscale
-                        h-[40vh]
+                        h-[30vh]
                         object-cover
                         transition-all
                         md:hover:cursor-pointer
@@ -137,7 +137,6 @@
                             md:mb-4
                             md:rounded-md
                             md:shadow-lg
-                            md:text-right
                         "
                     >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -206,7 +205,7 @@
                         filter
                         opacity-20
                         grayscale
-                        h-[40vh]
+                        h-[30vh]
                         object-cover
                         md:hover:cursor-pointer
                         md:hover:filter-none
@@ -224,11 +223,12 @@
 </template>
 
 <script>
-import { socialMedia } from "~/config";
+import { socialMedia, projectNames } from "~/config";
 export default {
     data() {
         return {
             socialMedia: null,
+            projectNames: null,
         };
     },
     props: {
@@ -242,9 +242,17 @@ export default {
         },
     },
     created() {
-        console.log(socialMedia);
         this.socialMedia = socialMedia;
+        this.projectNames = projectNames;
     },
+    // async fetch() {
+    //     const reponse = await fetch(
+    //         "https://api.github.com/users/weicheng2138/repos"
+    //     );
+    //     const result = await reponse.json();
+    //     console.log(result);
+    //     console.log(this.projectNames);
+    // },
 };
 </script>
 

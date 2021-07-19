@@ -6,33 +6,9 @@
 
         <SectionsJobs id="jobs" v-animate-on-scroll />
 
-        <SectionsProjects id="projects" v-animate-on-scroll />
+        <SectionsProjects id="works" v-animate-on-scroll />
 
         <SectionsContact id="contact" v-animate-on-scroll />
-        <!-- <GithubElement
-            v-for="post in posts"
-            :key="post.id"
-            :title="post.title"
-            :excerpt="post.previewText"
-            :thumbnailImg="post.thumbnailUrl"
-            :id="post.id"
-        />
-
-        <Projects :title="aboutPage.title" :content="aboutPage.content" /> -->
-
-        <!-- <div class="links">
-                <a
-                    href="https://nuxtjs.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="button--green"
-                >
-                    Documentation
-                </a>
-                <NuxtLink to="/404"> 404 Page </NuxtLink>
-            </div>
-            <Logo /> -->
-        <!-- <Footer /> -->
     </div>
 </template>
 

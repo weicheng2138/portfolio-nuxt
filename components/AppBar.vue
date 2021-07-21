@@ -75,9 +75,7 @@
 </template>
 
 <script>
-import Hamburger from "./Menu.vue";
 export default {
-    components: { Hamburger },
     data() {
         return {
             showNavbar: true,

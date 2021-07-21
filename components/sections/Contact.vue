@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-2xl flex flex-col justify-center items-center">
+    <section class="max-w-2xl flex flex-col justify-center items-center mb-12">
         <h2 class="numberedContactHeading">What's Next?</h2>
         <h2 class="bigHeading mb-5">Contact Me</h2>
         <p class="text-center text-bcMd">

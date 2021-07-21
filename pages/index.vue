@@ -6,7 +6,7 @@
 
         <SectionsJobs id="jobs" v-animate-on-scroll />
 
-        <SectionsProjects id="works" v-animate-on-scroll />
+        <SectionsProjects id="works" v-animate-on-scroll :posts="posts" />
 
         <SectionsContact id="contact" v-animate-on-scroll />
     </div>
@@ -20,6 +20,7 @@ export default {
             version: "draft",
             starts_with: "blog/",
         });
+        // console.log(tempPosts.data.stories);
 
         let tempAboutPage = await context.app.$storyapi.get(
             "cdn/stories/about/about",
@@ -36,8 +37,10 @@ export default {
                 return {
                     id: el.slug,
                     title: el.content.title,
+                    githubUrl: el.content.githubUrl,
                     previewText: el.content.previewText,
                     thumbnailUrl: el.content.thumbnailUrl.filename,
+                    tags: el.content.tags,
                 };
             }),
         };

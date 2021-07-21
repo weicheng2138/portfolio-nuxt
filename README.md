@@ -64,7 +64,7 @@ Before I start the job, there are something need to be done.
 7. 🐛 Bugs Note
 
     - About selfie div height with weird height which make the range between section 3 too long.
-    - Mix-blend-mode conflicts with backdrop blur. You can't use both of then in the same view area. Although I try to manually turn it off by the event listening.
+    - ~~Mix-blend-mode conflicts with backdrop blur. You can't use both of then in the same view area. Although I try to manually turn it off by the event listening.~~ Can be fixed by background-image and background-blend-mode.
 
 ## Build Setup
 

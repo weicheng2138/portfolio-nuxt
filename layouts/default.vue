@@ -18,7 +18,7 @@
                     @click.native="changeMenuStatus"
                 ></overlay>
                 <Nuxt class="z-0" />
-                <Footer />
+                <Footer v-animate-on-scroll />
             </main>
         </div>
     </div>

@@ -14,6 +14,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            isLoading: true,
+        };
+    },
     scrollToTop: true,
     async asyncData(context) {
         let tempPosts = await context.app.$storyapi.get("cdn/stories", {
@@ -62,6 +67,11 @@ export default {
         //             }),
         //         };
         //     });
+    },
+    mounted() {
+        setTimeout(() => {
+            this.isLoading = false;
+        }, 3000);
     },
     methods: {
         refresh() {

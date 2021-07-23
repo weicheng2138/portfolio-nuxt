@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="loading-page" v-if="isLoading">
+    <div class="loading" v-if="isLoading">
         <svg
                         width="200"
                         height="200"
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scoped>
-.loading-page {
+.loading {
     @apply flex justify-center items-center bg-bcDarkNavy;
 }
 

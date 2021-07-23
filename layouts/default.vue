@@ -12,11 +12,11 @@
             <Side :isHome="isHome" class="z-30 relative" />
 
             <main class="fillHeight relative z-20">
-                <overlay
+                <Overlay
                     v-if="menuOpen"
                     class="z-20"
                     @click.native="changeMenuStatus"
-                ></overlay>
+                ></Overlay>
                 <Nuxt class="z-0" />
                 <Footer v-animate-on-scroll />
             </main>
@@ -25,11 +25,8 @@
 </template>
 
 <script>
-import Loading from "~/pages/Loading.vue";
 import { navLinks } from "@/config";
-import Overlay from "~/components/Overlay.vue";
 export default {
-    components: { Loading, Overlay },
     data() {
         return {
             isLoading: true,

@@ -174,7 +174,7 @@ button {
     }
 }
 .inner {
-    @apply w-full relative h-auto py-[10px] px-1;
+    @apply w-full relative h-auto py-[10px] px-1 ml-5;
     h3 {
         @apply mb-[2px] text-bcXl font-medium leading-tight md:text-bcXxl;
     }

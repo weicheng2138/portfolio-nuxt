@@ -119,12 +119,6 @@ export default {
             }
         },
         onScroll() {
-            // console.log(
-            //     "pageYOffset: " +
-            //         window.pageYOffset +
-            //         " lastScrollPosition: " +
-            //         this.lastScrollPosition
-            // );
             if (window.pageYOffset < 0) {
                 return;
             }

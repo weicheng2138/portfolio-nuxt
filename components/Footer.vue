@@ -121,7 +121,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div>Built by Keck Hung</div>
+            Built by Keck Hung
         </a>
 
         <a
@@ -130,7 +130,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            <div>Refer to Brittany Chiang's portfolio</div>
+            Refer to Brittany Chiang's portfolio
         </a>
     </section>
 </template>
@@ -153,11 +153,15 @@ export default {
 .social {
     @apply md:hidden flex mb-3  w-full max-w-[267px] justify-between;
     a {
-        @apply flex p-3 hover:text-bcColor transition duration-500 ease-bcEasing;
+        @apply flex p-3 hover:text-bcColor text-bcLightestSlate transition duration-500 ease-bcEasing;
         svg {
             width: 20px;
             height: 20px;
         }
     }
+}
+
+a {
+    @apply text-bcLightestSlate;
 }
 </style>

@@ -23,7 +23,7 @@ export default {
     async asyncData(context) {
         let tempPosts = await context.app.$storyapi.get("cdn/stories", {
             version: "draft",
-            starts_with: "blog/",
+            starts_with: "jobs/",
         });
         // console.log(tempPosts.data.stories);
 
@@ -38,12 +38,15 @@ export default {
                 title: tempAboutPage.data.story.content.title,
                 content: tempAboutPage.data.story.content.content,
             },
+
             posts: tempPosts.data.stories.map((el) => {
                 return {
-                    id: el.slug,
+                    id: el.id,
+                    order: parseInt(el.content.order) % 2,
                     title: el.content.title,
                     githubUrl: el.content.githubUrl,
-                    previewText: el.content.previewText,
+                    demoLink: el.content.demoLink,
+                    previewTexts: el.content.previewText,
                     thumbnailUrl: el.content.thumbnailUrl.filename,
                     tags: el.content.tags,
                 };

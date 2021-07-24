@@ -55,6 +55,7 @@ export default {
 
 #wei {
     stroke: #64ffda;
+    stroke-width: 0.4px;
     stroke-linecap: round;
     animation: textAnimate 3s;
     animation-fill-mode: forwards;

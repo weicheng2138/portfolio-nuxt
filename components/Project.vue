@@ -1,45 +1,25 @@
 <template>
-    <li class="relative flex justify-end mb-7 sm:mb-16 md:mb-24">
-        <div class="imgContainer"></div>
-        <!-- <img
-            class="
-                z-0
-                absolute
-                left-0
-                filter
-                opacity-20
-                grayscale
-                h-[30vh]
-                object-cover
-                transition-all
-                md:hover:cursor-pointer
-                md:hover:filter-none
-                md:hover:opacity-100
-                md:w-8/12
-                md:top-1/4
-                md:h-auto
-            "
-            src="~/static/img/portfolio_screenshot.png"
-            alt=""
-        /> -->
+    <li
+        class="relative flex mb-7 sm:mb-16 md:mb-24"
+        :class="[order ? 'justify-end' : '']"
+    >
         <div
-            class="
-                z-10
-                relative
-                mx-4
-                sm:mx-8
-                mt-[10%]
-                flex flex-col
-                md:items-end
-                md:w-8/12
-            "
+            class="imgContainer"
+            :class="[order ? 'left-0' : 'right-0']"
+            :style="imgUrlStyle"
+        ></div>
+
+        <div
+            class="relative mx-4 sm:mx-8 mt-[10%] flex flex-col md:w-8/12"
+            :class="[order ? 'md:items-end' : 'md:items-start']"
         >
-            <h3 class="text-bcColor font-mono text-bcXxs pb-3">
+            <h3 class="z-0 text-bcColor font-mono text-bcXxs pb-3">
                 Featured Project
             </h3>
-            <h3 class="text-bcWhite pb-6">Portfolio</h3>
+            <h3 class="z-0 text-bcWhite pb-6">{{ title }}</h3>
             <p
                 class="
+                    z-20
                     text-bcMd
                     pb-6
                     md:bg-bcLightNavy
@@ -47,20 +27,18 @@
                     md:mb-4
                     md:rounded-md
                     md:shadow-lg
-                    md:text-right
                 "
+                :class="[order ? 'md:text-right' : '']"
             >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
                 quibusdam sunt autem laborum minima asperiores aperiam sequi
                 unde eos iste, ut itaque officia hic eum totam! Similique
                 suscipit velit eius.
             </p>
-            <ul class="flex flex-row font-mono text-bcXs pb-4">
-                <li class="pr-3">Nuxt.js</li>
-                <li class="pr-3">Tailwindcss</li>
-                <li class="pr-3">GitHub API</li>
+            <ul class="z-20 flex flex-row font-mono text-bcXs pb-4">
+                <li v-for="tag in tags" :key="tag" class="pr-4">{{ tag }}</li>
             </ul>
-            <div class="flex flex-row -ml-3">
+            <div class="z-0 flex flex-row -ml-3">
                 <a target="_blank" rel="noopener noreferrer" class="p-3">
                     <svg
                         class="w-5 h-5"
@@ -102,14 +80,48 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: {
+        order: {
+            require: true,
+        },
+        title: {
+            type: String,
+            require: true,
+        },
+        githubUrl: {
+            type: String,
+            require: false,
+        },
+        demoLink: {
+            type: String,
+            require: false,
+        },
+        previewTexts: {
+            type: Array,
+            require: true,
+        },
+        thumbnailUrl: {
+            type: String,
+            require: true,
+        },
+        tags: {
+            type: Array,
+            require: true,
+        },
+    },
+    computed: {
+        imgUrlStyle() {
+            return `background-image: url('${this.thumbnailUrl}')`;
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .imgContainer {
-    @apply z-0 absolute left-0 bg-bcColor opacity-20 bg-blend-multiply h-[30vh] w-full transition-all md:hover:cursor-pointer
-    md:hover:bg-blend-normal md:opacity-100 md:w-8/12 md:top-1/4;
-    background-image: url("~/static/img/portfolio_screenshot.png");
+    @apply z-10 absolute bg-bcColor opacity-20 bg-blend-multiply h-[30vh] w-full transition-all md:hover:cursor-pointer
+    md:hover:bg-blend-normal md:opacity-100 md:w-8/12 md:top-1/4 h-full rounded-md;
     background-size: cover;
     background-repeat: no-repeat;
 }

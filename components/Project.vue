@@ -39,7 +39,13 @@
                 <li v-for="tag in tags" :key="tag" class="pr-4">{{ tag }}</li>
             </ul>
             <div class="z-0 flex flex-row -ml-3">
-                <a target="_blank" rel="noopener noreferrer" class="p-3">
+                <a
+                    v-if="githubUrl"
+                    v-bind:href="`${githubUrl}`"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-3"
+                >
                     <svg
                         class="w-5 h-5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +64,13 @@
                         ></path>
                     </svg>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" class="p-3">
+                <a
+                    v-if="demoLink"
+                    v-bind:href="`${demoLink}`"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-3"
+                >
                     <svg
                         class="h-5 w-5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -124,5 +136,8 @@ export default {
     md:hover:bg-blend-normal md:opacity-100 md:w-8/12 md:top-1/4 h-full rounded-md;
     background-size: cover;
     background-repeat: no-repeat;
+}
+a {
+    @apply flex p-3 hover:text-bcColor text-bcLightestSlate transition duration-500 ease-bcEasing;
 }
 </style>

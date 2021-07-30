@@ -1,7 +1,7 @@
 <template>
     <section class="max-w-[700px]">
         <h2 class="numberedHeading">Where I've Experienced</h2>
-        <div class="flex min-h-[340px]">
+        <div class="flex min-h-[450px] sm:min-h-[300px]">
             <div class="flex flex-col relative w-max p-0 m-0 list-none">
                 <button @click="actvieTabId = 0">NTU</button>
                 <button @click="actvieTabId = 1">ANHE</button>
@@ -53,7 +53,13 @@
                             <ul>
                                 <li>
                                     Algorithm implementation with Java which is
-                                    refer to Zhang (2015).
+                                    refer to
+                                    <a
+                                        class="text-bcColor focus:outline-none"
+                                        href="https://link.springer.com/article/10.1007/s00170-015-7071-9"
+                                        target="_blank"
+                                        >Zhang (2015)</a
+                                    >.
                                 </li>
                                 <li>
                                     Design human interface for inkjet 3D printer
@@ -77,7 +83,7 @@
                         <p>June 2013 - July 2017</p>
                         <div>
                             <ul>
-                                <li>Major in industrial management</li>
+                                <li>Major in Industrial Management</li>
                                 <li>
                                     SAP ERP student team leader of production
                                     planning.
@@ -95,14 +101,14 @@
                         <h3>
                             Bachelor @ National Changhua University of Education
                         </h3>
-                        <p>September 2009 - June 2017</p>
+                        <p>September 2009 - June 2013</p>
                         <div>
                             <ul>
                                 <li>Major in Mathematics and Statstics.</li>
                                 <li>Junior high tutor for math and nature.</li>
                                 <li>
-                                    Leader of school year book in graduation
-                                    student association.
+                                    Leader Editor of school year book in
+                                    graduation student association.
                                 </li>
                             </ul>
                         </div>

@@ -42,11 +42,13 @@
             >
                 {{ link.name }}
             </NuxtLink>
-            <button
+            <a
+                href="/weichenghung_cv.pdf"
+                target="_blank"
                 class="bigButton text-bcXs py-4 px-12 mx-auto mt-8 min-w-max"
             >
                 Resume
-            </button>
+            </a>
         </div>
     </div>
 </template>

@@ -71,6 +71,10 @@ svg {
     @apply align-middle;
 }
 
+a {
+    @apply cursor-pointer;
+}
+
 h1,
 h2,
 h3,

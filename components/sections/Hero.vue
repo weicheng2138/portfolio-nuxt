@@ -24,17 +24,16 @@
                 v-animate-delay:fade-up="1400"
                 class="text-bcSlate bigHeading mt-2 leading-[0.9]"
             >
-                I build things for the web.
+                I create things and enjoy the process of it.
             </h3>
             <p
                 v-animate-delay:fade-up="1500"
                 class="text-bcSlate mt-5 mb-0 max-w-lg leading-[1.3] text-bcLg"
             >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Consectetur quam architecto veniam exercitationem delectus
-                voluptatibus mollitia ipsa officia. Non cumque perspiciatis
-                sapiente assumenda quod totam iusto voluptatum maxime est
-                asperiores!
+                I'm a software engineer specializing in building interfaces and
+                application of web. Since I have not worked in a solid software
+                team, I would like to join one to improve my co-working skill
+                and UX techniques.
             </p>
             <a
                 v-animate-delay:fade-up="1600"

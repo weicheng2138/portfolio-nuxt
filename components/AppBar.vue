@@ -63,12 +63,14 @@
                     </span>
                     {{ link.name }}
                 </NuxtLink>
-                <button
+                <a
+                    href="/weichenghung_cv.pdf"
+                    target="_blank"
                     v-animate-delay:fade-down="500"
                     class="bigButton text-bcXs ml-4 py-2 px-4"
                 >
                     Resume
-                </button>
+                </a>
             </div>
         </div>
     </nav>

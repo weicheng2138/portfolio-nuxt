@@ -5,14 +5,16 @@
             <div class="col-span-3">
                 <div>
                     <p class="my-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sit molestiae tenetur ex necessitatibus libero magnam a
-                        perferendis possimus itaque, enim modi assumenda. Ipsa
-                        pariatur commodi ut, ipsam dolorem neque sequi?
+                        The reason why I'm interest in web development started
+                        back in 2015 when I am struggle in develop an internal
+                        system with JavaServer Pages（JSP）in Anhe. After that
+                        we switch the developing direction to Angular 2, then
+                        every turns out to be bright and interesting.
                     </p>
                     <p class="my-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Dolorem, optio explicabo? Cum soluta
+                        Problem based learning is always my key way of learning
+                        which clear my purpose and also solve the problem
+                        effetively.
                     </p>
                     <p>
                         Here are a few technologies I've been working with

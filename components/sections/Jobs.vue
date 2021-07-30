@@ -3,11 +3,10 @@
         <h2 class="numberedHeading">Where I've Experienced</h2>
         <div class="flex min-h-[340px]">
             <div class="flex flex-col relative w-max p-0 m-0 list-none">
-                <button @click="actvieTabId = 0">NCUE</button>
-
-                <button @click="actvieTabId = 1">NCU</button>
-                <button @click="actvieTabId = 2">ANHE</button>
-                <button @click="actvieTabId = 3">NTU</button>
+                <button @click="actvieTabId = 0">NTU</button>
+                <button @click="actvieTabId = 1">ANHE</button>
+                <button @click="actvieTabId = 2">NCU</button>
+                <button @click="actvieTabId = 3">NCUE</button>
                 <span
                     class="highLight"
                     :style="{
@@ -19,24 +18,28 @@
             <div class="inner">
                 <transition name="fade">
                     <div id="0" v-if="actvieTabId === 0" class="absolute">
-                        <h3>
-                            Student @ National Changhua Education University
-                        </h3>
-                        <p>May 2012 - June 2015</p>
+                        <h3>R&D Substitute @ National Taiwan University</h3>
+                        <p>August 2017 - June 2021</p>
                         <div>
                             <ul>
                                 <li>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Iure eligendi nesciunt
-                                    enim recusandae cumque?
+                                    Construct internal inventory system for lab
+                                    by using RFID, Vue.js, Bootstrap and
+                                    Firebase.
+                                </li>
+                                <li>Lab MIS.</li>
+                                <li>Six-axis robot arm controlling.</li>
+                                <li>
+                                    Project execution which related to chemical
+                                    engineering.
                                 </li>
                                 <li>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing
+                                    Side Project: Nuxt portfolio with
+                                    Tailwindcss and StoryBlok
                                 </li>
                                 <li>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing
+                                    Side Project: Taifex data crawling and
+                                    electron-vue desktop app.
                                 </li>
                             </ul>
                         </div>
@@ -44,54 +47,63 @@
                 </transition>
                 <transition name="fade">
                     <div id="1" v-if="actvieTabId === 1" class="absolute">
-                        <h3>Student @ National Center University</h3>
-                        <p>May 2012 - June 2015</p>
+                        <h3>Co-Founder @ Anhe Three Dimensional Co.</h3>
+                        <p>August 2015 - July 2017</p>
                         <div>
                             <ul>
                                 <li>
-                                    Amet consectetur adipisicing elit. Iure
-                                    eligendi nesciunt enim recusandae cumque?
+                                    Algorithm implementation with Java which is
+                                    refer to Zhang (2015).
                                 </li>
                                 <li>
-                                    Dsum dolor sit amet consectetur adipisicing
+                                    Design human interface for inkjet 3D printer
+                                    with Vaadin and Three.js.
                                 </li>
-                                <li>Eet consectetur adipisicing</li>
+                                <li>
+                                    Construct internal system with Angular 2,
+                                    Spring Boot Rest API and using MySQL as data
+                                    source.
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </transition>
                 <transition name="fade">
                     <div id="2" v-if="actvieTabId === 2" class="absolute">
-                        <h3>Software Engineer @ ANHE Three Dimensional</h3>
-                        <p>May 2012 - June 2015</p>
+                        <h3>
+                            SAP Student Instructor & Master @ National Center
+                            University
+                        </h3>
+                        <p>June 2013 - July 2017</p>
                         <div>
                             <ul>
+                                <li>Major in industrial management</li>
                                 <li>
-                                    Amet consectetur adipisicing elit. Iure
-                                    eligendi nesciunt enim recusandae cumque?
+                                    SAP ERP student team leader of production
+                                    planning.
                                 </li>
                                 <li>
-                                    Dsum dolor sit amet consectetur adipisicing
+                                    SAP product planning instructor for EMBA
+                                    students.
                                 </li>
-                                <li>Eet consectetur adipisicing</li>
                             </ul>
                         </div>
                     </div>
                 </transition>
                 <transition name="fade">
                     <div id="3" v-if="actvieTabId === 3" class="absolute">
-                        <h3>Post-graduated @ National Taiwan University</h3>
-                        <p>May 2012 - June 2021</p>
+                        <h3>
+                            Bachelor @ National Changhua University of Education
+                        </h3>
+                        <p>September 2009 - June 2017</p>
                         <div>
                             <ul>
+                                <li>Major in Mathematics and Statstics.</li>
+                                <li>Junior high tutor for math and nature.</li>
                                 <li>
-                                    Amet consectetur adipisicing elit. Iure
-                                    eligendi nesciunt enim recusandae cumque?
+                                    Leader of school year book in graduation
+                                    student association.
                                 </li>
-                                <li>
-                                    Dsum dolor sit amet consectetur adipisicing
-                                </li>
-                                <li>Eet consectetur adipisicing</li>
                             </ul>
                         </div>
                     </div>

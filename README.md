@@ -1,6 +1,12 @@
 # porfolio-nuxt
 
 <p align="center">
+    <a href="https://weichenghung.com" target="_blank">
+        weichenghung.com
+    </a>
+</p>
+
+<p align="center">
     <a href="https://app.netlify.com/sites/elated-payne-b4209a/deploys" target="_blank">
         <img src="https://api.netlify.com/api/v1/badges/8211a0c0-ee7b-4258-ab3d-2bb1757dbc32/deploy-status" alt="Netlify Status" />
     </a>

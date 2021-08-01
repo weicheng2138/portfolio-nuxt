@@ -42,7 +42,6 @@ export default {
     created() {
         this.socialMedia = socialMedia;
         this.projectNames = projectNames;
-        console.log(this.posts);
     },
     // async fetch() {
     //     const reponse = await fetch(

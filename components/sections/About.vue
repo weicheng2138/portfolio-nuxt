@@ -5,11 +5,8 @@
             <div class="col-span-3">
                 <div>
                     <p class="my-4">
-                        I take some time to get used to new people before I feel
-                        comfortable with you. I’m quiet and reserved. Once I get
-                        to know you, things tend to be casual. However, I'm a
-                        whiz at interpreting data and transforming it into
-                        useful information. .
+                        I'm a whiz at interpreting data and transforming it into
+                        useful information.
                     </p>
                     <p class="my-4">
                         The reason why I'm interested in web development started

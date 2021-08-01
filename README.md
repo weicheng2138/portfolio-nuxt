@@ -1,5 +1,13 @@
 # porfolio-nuxt
 
+<p align="center">
+    <a href="https://app.netlify.com/sites/elated-payne-b4209a/deploys" target="_blank">
+        <img src="https://api.netlify.com/api/v1/badges/8211a0c0-ee7b-4258-ab3d-2bb1757dbc32/deploy-status" alt="Netlify Status" />
+    </a>
+</p>
+
+![demo](https://a.storyblok.com/f/118480/3552x1874/2b310e6f40/portfolio_screenshot.png)
+
 This is a porfolio practice which consider [brittanychiang.com](https://brittanychiang.com) as my reference. My purpose is to reverse engineer her site and use the same appearance. One of goal is transforming [Gatsby](https://www.gatsbyjs.org/docs/) to [Nuxt](https://nuxtjs.org/) by using different front-end framework to do the job. This is simply for practice.
 
 ## Survey and Preparation

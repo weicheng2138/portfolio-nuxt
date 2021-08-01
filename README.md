@@ -63,7 +63,7 @@ Before I start the job, there are something need to be done.
 
 7. 🐛 Bugs Note
 
-    - About selfie div height with weird height which make the range between section 3 too long.
+    - ~~About selfie div height with weird height which make the range between section 3 too long~~ => fix with extra div for imgWrapper.
     - ~~Mix-blend-mode conflicts with backdrop blur. You can't use both of then in the same view area. Although I try to manually turn it off by the event listening.~~ => Can be fixed with background-image and background-blend-mode.
     - ~~Project thumbnail get covered by other detials.~~ => Deal with the z-index
 

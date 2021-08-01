@@ -30,10 +30,7 @@
                 "
                 :class="[order ? 'md:text-right' : '']"
             >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                quibusdam sunt autem laborum minima asperiores aperiam sequi
-                unde eos iste, ut itaque officia hic eum totam! Similique
-                suscipit velit eius.
+                {{ previewTexts[0].point1 }}
             </p>
             <ul class="z-20 flex flex-row font-mono text-bcXs pb-4">
                 <li v-for="tag in tags" :key="tag" class="pr-4">{{ tag }}</li>

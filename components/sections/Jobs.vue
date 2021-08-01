@@ -174,7 +174,7 @@ li {
 }
 
 button {
-    @apply font-mono items-center w-full h-bcTabHeight px-5 pt-0 pb-[2px] bg-transparent
+    @apply font-mono items-center w-full h-bcTabHeight px-2 sm:px-5 pt-0 pb-[2px] bg-transparent
     border-l-2 border-solid border-bcLightestNavy focus:outline-none 
     text-bcXl text-left whitespace-nowrap hover:bg-bcLightNavy focus:bg-bcLightNavy
     hover:text-bcColor focus:text-bcColor transition duration-500 ease-in-out;
@@ -192,7 +192,7 @@ button {
     }
 }
 .inner {
-    @apply w-full relative h-auto py-[10px] px-1 ml-5;
+    @apply w-full relative h-auto py-[10px] px-1 ml-2 sm:ml-5;
     h3 {
         @apply mb-[2px] text-bcXl font-medium leading-tight md:text-bcXxl;
     }

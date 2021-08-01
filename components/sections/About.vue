@@ -5,20 +5,26 @@
             <div class="col-span-3">
                 <div>
                     <p class="my-4">
-                        The reason why I'm interest in web development started
+                        I take some time to get used to new people before I feel
+                        comfortable with you. I’m quiet and reserved. Once I get
+                        to know you, things tend to be casual. However, I'm a
+                        whiz at interpreting data and transforming it into
+                        useful information. .
+                    </p>
+                    <p class="my-4">
+                        The reason why I'm interested in web development started
                         back in 2015 when I am struggle in develop an internal
                         system with JavaServer Pages（JSP）in Anhe. After that
                         we switch the developing direction to Angular 2, then
                         every turns out to be bright and interesting.
                     </p>
                     <p class="my-4">
-                        Problem based learning is always my key way of learning
-                        which clear my purpose and also solve the problem
-                        effetively.
+                        Problem based learning is always my key way of solving
+                        problems which clear my purpose and also solve the
+                        problem effetively.
                     </p>
                     <p>
-                        Here are a few technologies I've been working with
-                        recently:
+                        Here are technologies I've been working with recently:
                     </p>
                 </div>
                 <ul
@@ -39,8 +45,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-span-2 max-w-[300px] mt-6 mb-60 mx-auto imgWrapper">
-                <img src="~/static/img/me_with-back-ground.png" />
+            <div class="col-span-2 max-w-[300px] mt-6 mb-60 mx-auto">
+                <div class="imgWrapper">
+                    <img src="~/static/img/me_with-back-ground.png" />
+                </div>
             </div>
         </div>
     </section>
@@ -81,7 +89,7 @@ li:before {
     }
 
     img {
-        @apply relative rounded-xl transition-all z-50;
+        @apply relative rounded-xl transition-all z-50 inline-block;
         filter: grayscale(100%) contrast(1);
     }
 
@@ -92,7 +100,7 @@ li:before {
     }
 
     &:before {
-        @apply top-0 left-0  bg-bgColor z-50;
+        @apply top-0 left-0 bg-bgColor z-50;
     }
 
     &:after {

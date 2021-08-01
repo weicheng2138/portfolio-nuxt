@@ -47,7 +47,7 @@
             </div>
             <div class="col-span-2 max-w-[300px] mt-6 mb-60 mx-auto">
                 <div class="imgWrapper">
-                    <img src="~/static/img/me_with-back-ground.png" />
+                    <img src="~/static/img/me_with-back-ground.jpg" />
                 </div>
             </div>
         </div>

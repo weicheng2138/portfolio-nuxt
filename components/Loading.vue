@@ -57,7 +57,7 @@ export default {
     stroke: #64ffda;
     stroke-width: 0.4px;
     stroke-linecap: round;
-    animation: textAnimate 3s;
+    animation: textAnimate 3.5s;
     animation-fill-mode: forwards;
 }
 
@@ -93,7 +93,7 @@ export default {
         stroke-dashoffset: 20%;
         fill: transparent;
     }
-    90% {
+    80% {
         fill: #64ffda;
         opacity: 1;
     }

@@ -3,10 +3,8 @@
         <h2 class="numberedContactHeading">What's Next?</h2>
         <h2 class="bigHeading mb-5">Contact Me</h2>
         <p class="text-center text-bcMd">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus est
-            incidunt et in illum harum. Cum excepturi, dolore alias eligendi
-            nemo dolorem dolores ratione nam consequuntur est recusandae ad
-            cupiditate.
+            I'm currently looking for any new opportunities. If you're
+            interested, email me.
         </p>
         <a
             href="mailto:weicheng2138@gmail.com"

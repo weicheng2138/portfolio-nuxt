@@ -6,7 +6,7 @@
     </a>
 </p>
 
-![demo](https://a.storyblok.com/f/118480/3552x1874/2b310e6f40/portfolio_screenshot_1.png)
+![demo](https://a.storyblok.com/f/118480/3074x2000/74c5a572dc/portfolio_screenshot_1.png)
 
 This is a porfolio practice which consider [brittanychiang.com](https://brittanychiang.com) as my reference. My purpose is to reverse engineer her site and use the same appearance. One of goal is transforming [Gatsby](https://www.gatsbyjs.org/docs/) to [Nuxt](https://nuxtjs.org/) by using different front-end framework to do the job. This is simply for practice.
 

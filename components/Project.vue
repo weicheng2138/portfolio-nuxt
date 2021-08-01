@@ -4,13 +4,13 @@
         :class="[order ? 'justify-end' : '']"
     >
         <div
-            class="imgContainer"
+            class="z-0 md:z-10 imgContainer"
             :class="[order ? 'left-0' : 'right-0']"
             :style="imgUrlStyle"
         ></div>
 
         <div
-            class="relative mx-4 sm:mx-8 mt-[10%] flex flex-col md:w-8/12"
+            class="relative mx-4 mb-2 sm:mx-8 mt-[10%] flex flex-col md:w-8/12"
             :class="[order ? 'md:items-end' : 'md:items-start']"
         >
             <h3 class="z-0 text-bcColor font-mono text-bcXxs pb-3">
@@ -35,13 +35,12 @@
             <ul class="z-20 flex flex-row font-mono text-bcXs pb-4">
                 <li v-for="tag in tags" :key="tag" class="pr-4">{{ tag }}</li>
             </ul>
-            <div class="z-0 flex flex-row -ml-3">
+            <div class="z-10 md:z-0 flex flex-row -ml-3">
                 <a
                     v-if="githubUrl"
                     v-bind:href="`${githubUrl}`"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="p-3"
                 >
                     <svg
                         class="w-5 h-5"
@@ -66,7 +65,6 @@
                     v-bind:href="`${demoLink}`"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="p-3"
                 >
                     <svg
                         class="h-5 w-5"
@@ -129,7 +127,7 @@ export default {
 
 <style lang="scss" scoped>
 .imgContainer {
-    @apply z-10 absolute bg-bcColor opacity-20 bg-blend-multiply h-[30vh] w-full transition-all md:hover:cursor-pointer
+    @apply absolute bg-bcColor opacity-20 bg-blend-multiply h-[30vh] w-full transition-all md:hover:cursor-pointer
     md:hover:bg-blend-normal md:opacity-100 md:w-8/12 md:top-1/4 h-full rounded-md;
     background-size: cover;
     background-repeat: no-repeat;

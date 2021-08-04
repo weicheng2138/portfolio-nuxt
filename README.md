@@ -1,8 +1,8 @@
 # porfolio-nuxt
 
 <p align="center">
-    <a href="https://weichenghung.com" target="_blank">
-        weichenghung.com
+    <a href="https://weichenghung-demo.netlify.app" target="_blank">
+        Demo Site
     </a>
 </p>
 
